@@ -38,7 +38,7 @@
 </head>
 <body>
 
-    <!-- Header Section -->
+    <!-- Header Section (Fully Responsive) -->
     <header class="bg-white shadow-lg rounded-b-xl p-4 md:p-6 mb-8 mx-auto max-w-7xl">
         <div class="flex items-center justify-between">
             <div class="flex items-center space-x-4">
@@ -47,55 +47,52 @@
                     id="peers-logo-header"
                     src="" 
                     alt="Peers LBC Logo" 
-                    class="h-16 md:h-16 w-auto"
+                    class="h-12 md:h-16 w-auto" 
                 />
                 <!-- CIMA MIP Logo (Full Color version on white background) -->
                 <img 
                     id="cima-logo-header"
                     src="" 
                     alt="CIMA Management Accounting Partner Logo" 
-                    class="h-16 md:h-16 pl-4"
+                    class="h-10 md:h-12 pl-4" 
                 />
             </div>
-            <nav class="flex space-x-2 md:space-x-4">
-                <a href="javascript:void(0)" onclick="showSection('about')" class="color-navy hover:text-gray-600 font-medium px-2 py-1 rounded-lg transition-colors">About</a>
-                <a href="javascript:void(0)" onclick="showSection('services-page')" class="color-navy hover:text-gray-600 font-medium px-2 py-1 rounded-lg transition-colors">Services</a>
-                <a href="#contact" class="color-navy hover:text-gray-600 font-medium px-2 py-1 rounded-lg transition-colors">Contact</a>
+            <nav class="flex space-x-2 md:space-x-4 text-sm md:text-base">
+                <a href="javascript:void(0)" onclick="showSection('about')" class="color-navy hover:text-gray-600 font-medium px-1 py-1 rounded-lg transition-colors">About</a>
+                <a href="javascript:void(0)" onclick="showSection('services-page')" class="color-navy hover:text-gray-600 font-medium px-1 py-1 rounded-lg transition-colors">Services</a>
+                <a href="#contact" class="color-navy hover:text-gray-600 font-medium px-1 py-1 rounded-lg transition-colors">Contact</a>
             </nav>
         </div>
     </header>
 
     <!-- Main Content Section -->
-    <main class="container mx-auto px-4">
+    <main class="container mx-auto px-2 md:px-4">
         
         <!-- Welcome Section with Business Size Choice (Home Page) -->
-        <section id="welcome-section" class="bg-hero-gradient text-white p-8 md:p-12 rounded-2xl mb-8 shadow-lg text-center">
+        <section id="welcome-section" class="bg-hero-gradient text-white p-6 md:p-12 rounded-2xl mb-8 shadow-lg text-center">
             <h2 class="text-3xl md:text-5xl font-extrabold mb-4">Your profit is there. Let us find it.</h2>
             <p class="text-lg md:text-xl font-light mb-6">
                 Management accounting for ambitious Northamptonshire businesses. We turn your financial data into growth decisions.
             </p>
-            <h3 class="2xl font-semibold mb-4">What best describes your business?</h3>
-            <p class="mb-6">
-                Choose the option that best describes your business to see the services most relevant to you.
-            </p>
+            <h3 class="text-xl md:text-2xl font-semibold mb-4">What best describes your business?</h3>
 
-            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-8">
-                <button onclick="showSection('small-business-section')" class="bg-navy text-white font-bold py-4 px-8 rounded-full shadow-lg hover:opacity-80 transition-opacity flex flex-col items-center text-left">
-                    <span class="text-xl font-bold mb-1">Growing Businesses & Founders</span>
-                    <ul class="list-disc list-inside text-sm font-light text-gray-300 mx-auto">
+            <div class="flex flex-col lg:flex-row justify-center space-y-4 lg:space-y-0 lg:space-x-8">
+                <button onclick="showSection('small-business-section')" class="bg-navy text-white font-bold py-4 px-6 rounded-xl shadow-lg hover:opacity-80 transition-opacity flex flex-col items-center text-center">
+                    <span class="text-lg md:text-xl font-bold mb-1">Growing Businesses & Founders</span>
+                    <ul class="list-disc list-inside text-xs font-light text-gray-300 mx-auto mt-2">
                         <li>Start-ups with ambitious goals.</li>
                     </ul>
                 </button>
-                <button onclick="showSection('large-business-section')" class="bg-purple text-white font-bold py-4 px-8 rounded-full shadow-lg hover:opacity-80 transition-opacity flex flex-col items-center text-left">
-                    <span class="text-xl font-bold mb-1">Established & Scaling Businesses</span>
-                    <ul class="list-disc list-inside text-sm font-light text-gray-300 mx-auto">
+                <button onclick="showSection('large-business-section')" class="bg-purple text-white font-bold py-4 px-6 rounded-xl shadow-lg hover:opacity-80 transition-opacity flex flex-col items-center text-center">
+                    <span class="text-lg md:text-xl font-bold mb-1">Established & Scaling Businesses</span>
+                    <ul class="list-disc list-inside text-xs font-light text-gray-300 mx-auto mt-2">
                         <li>Multi-site businesses</li>
                         <li>Performance management</li>
                     </ul>
                 </button>
-                <button onclick="showSection('local-business-section')" class="bg-pink text-white font-bold py-4 px-8 rounded-full shadow-lg hover:opacity-80 transition-opacity flex flex-col items-center text-left">
-                    <span class="text-xl font-bold mb-1">Small & Local Business</span>
-                    <ul class="list-disc list-inside text-sm font-light text-gray-300 mx-auto">
+                <button onclick="showSection('local-business-section')" class="bg-pink text-white font-bold py-4 px-6 rounded-xl shadow-lg hover:opacity-80 transition-opacity flex flex-col items-center text-center">
+                    <span class="text-lg md:text-xl font-bold mb-1">Small & Local Business</span>
+                    <ul class="list-disc list-inside text-xs font-light text-gray-300 mx-auto mt-2">
                         <li>Community-focused</li>
                         <li>Local expertise</li>
                     </ul>
@@ -104,46 +101,47 @@
 
             <!-- CIMA MIP Trust Marker (Black/White on colored background) -->
             <div class="flex flex-col sm:flex-row justify-center items-center space-y-2 sm:space-y-0 sm:space-x-6 mt-8">
-                <span class="text-base font-semibold">CIMA Chartered & Management Accounting Partners</span>
+                <span class="text-sm md:text-base font-semibold">CIMA Chartered & Management Accounting Partners</span>
                 <img 
                     id="cima-logo-welcome"
                     src="" 
                     alt="CIMA Management Accounting Partner Logo" 
-                    class="h-10 filter-invert"
+                    class="h-8 md:h-10 filter-invert"
                 />
             </div>
         </section>
         
         <!-- Services Comparison Page (New) -->
         <section id="services-page" class="hidden">
-            <section class="bg-hero-gradient text-white p-8 md:p-12 rounded-2xl mb-8 shadow-lg text-center">
+            <section class="bg-hero-gradient text-white p-6 md:p-12 rounded-2xl mb-8 shadow-lg text-center">
                 <h2 class="text-3xl md:text-5xl font-extrabold mb-4">Our Service Packages</h2>
                 <p class="text-lg md:text-xl font-light mb-6">
                     We offer three distinct service packages designed to fit your business at every stage of its journey.
                 </p>
             </section>
-            <section class="bg-white p-8 md:p-10 rounded-2xl mb-8 shadow-lg text-center">
-                <h3 class="text-2xl font-semibold color-navy mb-4">Your Business Is Unique. Your Financial Partnership Should Be Too.</h3>
-                <p class="text-gray-700 leading-relaxed max-w-2xl mx-auto">
+            <section class="bg-white p-6 md:p-10 rounded-2xl mb-8 shadow-lg text-center">
+                <h3 class="text-xl md:text-2xl font-semibold color-navy mb-4">Your Business Is Unique. Your Financial Partnership Should Be Too.</h3>
+                <p class="text-gray-700 leading-relaxed max-w-2xl mx-auto text-sm md:text-base">
                     We believe that every business is as unique as its owner. The packages below are a powerful starting point, but they are fully customizable. We work with you to build a tailored solution that addresses your specific challenges and helps you achieve your goals.
                 </p>
             </section>
-            <section class="bg-white p-8 md:p-10 rounded-2xl mb-8 shadow-lg">
-                <h3 class="text-2xl font-semibold color-navy mb-4 text-center">Find a Package That Fits Your Needs</h3>
+            <section class="bg-white p-6 md:p-10 rounded-2xl mb-8 shadow-lg">
+                <h3 class="text-xl md:text-2xl font-semibold color-navy mb-4 text-center">Find a Package That Fits Your Needs</h3>
                 <div class="overflow-x-auto">
-                    <table class="w-full text-left table-auto border-separate border-spacing-x-4 border-spacing-y-2">
+                    <!-- Adjusted table for better mobile viewing -->
+                    <table class="w-full text-left table-auto border-separate border-spacing-x-4 border-spacing-y-2 min-w-[600px] md:min-w-full">
                         <thead>
                             <tr class="bg-gray-100 rounded-lg">
-                                <th class="py-4 px-2 font-semibold color-navy rounded-l-xl">Service</th>
-                                <th class="py-4 px-2 font-semibold color-purple text-center">Foundational</th>
-                                <th class="py-4 px-2 font-semibold color-purple text-center">Growth</th>
-                                <th class="py-4 px-2 font-semibold color-purple text-center rounded-r-xl">Enterprise</th>
+                                <th class="py-4 px-2 font-semibold color-navy rounded-l-xl text-sm">Service</th>
+                                <th class="py-4 px-2 font-semibold color-purple text-center text-sm">Foundational</th>
+                                <th class="py-4 px-2 font-semibold color-purple text-center text-sm">Growth</th>
+                                <th class="py-4 px-2 font-semibold color-purple text-center rounded-r-xl text-sm">Enterprise</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody class="text-sm">
                             <!-- Foundational Services (Included in all) -->
                             <tr class="font-semibold color-navy">
-                                <td colspan="4" class="py-2 px-2 bg-gray-200 rounded-lg">Core Accounting & Partnership</td>
+                                <td colspan="4" class="py-2 px-2 bg-gray-200 rounded-lg text-xs md:text-sm">Core Accounting & Partnership</td>
                             </tr>
                             <tr>
                                 <td class="py-2 px-2 color-navy">Bookkeeping & Account Management</td>
@@ -166,7 +164,7 @@
                             
                             <!-- Growth Services (Included in Growth and Enterprise) -->
                             <tr class="font-semibold color-navy">
-                                <td colspan="4" class="py-2 px-2 bg-gray-200 rounded-lg mt-4">Growth & Strategic Planning</td>
+                                <td colspan="4" class="py-2 px-2 bg-gray-200 rounded-lg mt-4 text-xs md:text-sm">Growth & Strategic Planning</td>
                             </tr>
                             <tr>
                                 <td class="py-2 px-2 color-navy">Funding-Ready Accounts</td>
@@ -189,7 +187,7 @@
                             
                             <!-- Enterprise Services (Included in Enterprise only) -->
                             <tr class="font-semibold color-navy">
-                                <td colspan="4" class="py-2 px-2 bg-gray-200 rounded-lg mt-4">Enterprise & Automation Solutions</td>
+                                <td colspan="4" class="py-2 px-2 bg-gray-200 rounded-lg mt-4 text-xs md:text-sm">Enterprise & Automation Solutions</td>
                             </tr>
                             <tr>
                                 <td class="py-2 px-2 color-navy">Branch/Segment-level P&L Analysis</td>
@@ -229,7 +227,7 @@
 
         <!-- About Section -->
         <section id="about" class="hidden">
-            <section class="bg-hero-gradient text-white p-8 md:p-12 rounded-2xl mb-8 shadow-lg text-center">
+            <section class="bg-hero-gradient text-white p-6 md:p-12 rounded-2xl mb-8 shadow-lg text-center">
                 <h2 class="text-3xl md:text-5xl font-extrabold mb-4">Peers LBC: Chartered Partnership. Lifelong Growth.</h2>
                 <p class="text-lg md:text-xl font-light mb-6">
                     Our team is committed to delivering precision, insight, and a partnership that grows with you.
@@ -237,9 +235,9 @@
             </section>
 
             <!-- Mission and Vision Section -->
-            <section class="bg-white p-8 md:p-10 rounded-2xl mb-8 shadow-lg">
-                <h3 class="text-2xl font-semibold color-navy mb-4 translate-y-3 text-center">Our Mission and Vision</h3>
-                <div class="text-gray-700 leading-relaxed max-w-4xl mx-auto space-y-4">
+            <section class="bg-white p-6 md:p-10 rounded-2xl mb-8 shadow-lg">
+                <h3 class="text-xl md:text-2xl font-semibold color-navy mb-4 translate-y-3 text-center">Our Mission and Vision</h3>
+                <div class="text-gray-700 leading-relaxed max-w-4xl mx-auto space-y-4 text-sm md:text-base">
                     <p>
                         The core difference between established big corporates and the SMEs that drive our community isn't potential; it's how their financial information is <span class="font-bold">managed and used to drive decisions.</span>
                     </p>
@@ -264,8 +262,8 @@
                 </div>
             </section>
 
-            <section class="bg-white p-8 md:p-10 rounded-2xl mb-8 shadow-lg">
-                <h3 class="text-2xl font-semibold color-navy mb-4 text-center">Our Core Commitments</h3>
+            <section class="bg-white p-6 md:p-10 rounded-2xl mb-8 shadow-lg">
+                <h3 class="text-xl md:text-2xl font-semibold color-navy mb-4 text-center">Our Core Commitments</h3>
                 
                 <!-- CIMA MIP Logo Above Commitments (Black/White on white background) -->
                 <div class="flex justify-center mb-6">
@@ -273,11 +271,11 @@
                         id="cima-logo-commitments"
                         src="" 
                         alt="CIMA Management Accounting Partner Logo" 
-                        class="h-12"
+                        class="h-10 md:h-12"
                     />
                 </div>
                 
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-gray-700 font-medium text-center">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-gray-700 font-medium text-center text-sm md:text-base">
                     <div class="bg-gray-50 rounded-xl shadow-inner p-6">
                         <h4 class="font-bold text-lg color-purple mb-2">Expert & Chartered</h4>
                         <p class="text-sm">As Chartered CIMA accountants, we are dedicated to the highest standards of accuracy and professional conduct in management accounting.</p>
@@ -292,8 +290,8 @@
                     </div>
                 </div>
 
-                <div class="text-center text-gray-700 leading-relaxed mt-12 max-w-2xl mx-auto">
-                    <h3 class="text-2xl font-semibold color-navy mb-4">Our Unique Approach: Data Science Integration</h3>
+                <div class="text-center text-gray-700 leading-relaxed mt-12 max-w-2xl mx-auto text-sm md:text-base">
+                    <h3 class="text-xl md:text-2xl font-semibold color-navy mb-4">Our Unique Approach: Data Science Integration</h3>
                     <p>We apply data science knowledge to accountancy, translating complex financial information into real-world, people-centered insights. We don't just crunch numbers; we help you understand what they mean for your business and your team.</p>
                 </div>
                 
@@ -308,7 +306,7 @@
         <!-- Growing Businesses Section (Initially Hidden) -->
         <section id="small-business-section" class="hidden">
              <!-- Hero Section with Gradient -->
-            <section class="bg-hero-gradient text-white p-8 md:p-12 rounded-2xl mb-8 shadow-lg text-center">
+            <section class="bg-hero-gradient text-white p-6 md:p-12 rounded-2xl mb-8 shadow-lg text-center">
                 <h2 class="text-3xl md:text-5xl font-extrabold mb-4">For Ambitious Start-ups & Local Businesses</h2>
                 <p class="text-lg md:text-xl font-light mb-6">
                     We help you build a solid financial foundation and secure your future growth.
@@ -318,9 +316,9 @@
                 </a>
             </section>
             <!-- Services Section for Growing Businesses -->
-            <section class="bg-white p-8 md:p-10 rounded-2xl mb-8 shadow-lg">
-                <h3 class="text-2xl font-semibold color-navy mb-4 text-center">Setting up the foundations for new and local businesses</h3>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-gray-700 font-medium">
+            <section class="bg-white p-6 md:p-10 rounded-2xl mb-8 shadow-lg">
+                <h3 class="text-xl md:text-2xl font-semibold color-navy mb-4 text-center">Setting up the foundations for new and local businesses</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-gray-700 font-medium text-sm md:text-base">
                     <div class="p-6 bg-gray-50 rounded-xl shadow-inner text-center">
                         <h4 class="font-bold text-lg color-purple mb-2">Bookkeeping</h4>
                         <p class="text-sm">We handle your day-to-day financial records so you can focus on building your business.</p>
@@ -345,9 +343,9 @@
                 </div>
             </section>
              <!-- Problem Section -->
-            <section class="bg-white p-8 md:p-10 rounded-2xl mb-8 shadow-lg">
-                <h3 class="text-2xl font-semibold color-navy mb-4 translate-y-3">Common New Business Frustrations</h3>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-gray-700 font-medium text-center">
+            <section class="bg-white p-6 md:p-10 rounded-2xl mb-8 shadow-lg">
+                <h3 class="text-xl md:text-2xl font-semibold color-navy mb-4 translate-y-3">Common New Business Frustrations</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 text-gray-700 font-medium text-sm md:text-base">
                     <div class="bg-gray-50 rounded-xl shadow-inner p-4 text-left flex items-start space-x-2">
                         <span class="text-xl font-extrabold color-pink">X</span>
                         <div>
@@ -382,9 +380,9 @@
             </section>
 
             <!-- Solution Section -->
-            <section id="services" class="bg-white p-8 md:p-10 rounded-2xl mb-8 shadow-lg">
-                <h3 class="text-2xl font-semibold color-navy mb-4">Growth Focused Insights for Founders</h3>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-gray-700 font-medium">
+            <section id="services" class="bg-white p-6 md:p-10 rounded-2xl mb-8 shadow-lg">
+                <h3 class="text-xl md:text-2xl font-semibold color-navy mb-4">Growth Focused Insights for Founders</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-gray-700 font-medium text-sm md:text-base">
                     <!-- Funding-ready accounts -->
                     <div class="p-6 bg-gray-50 rounded-xl shadow-inner">
                         <h4 class="font-bold text-lg color-purple mb-2">Funding-Ready Accounts</h4>
@@ -409,8 +407,8 @@
             </section>
             
             <!-- Social Proof Section -->
-            <section class="bg-white p-8 md:p-10 rounded-2xl mb-8 shadow-lg">
-                <h3 class="text-2xl font-semibold color-navy mb-4">Social Proof</h3>
+            <section class="bg-white p-6 md:p-10 rounded-2xl mb-8 shadow-lg">
+                <h3 class="text-xl md:text-2xl font-semibold color-navy mb-4">Social Proof</h3>
                 <div id="testimonial-container-small">
                     <!-- Testimonial content will be injected here by JavaScript -->
                 </div>
@@ -420,7 +418,7 @@
         <!-- Established & Scaling Businesses Section (Initially Hidden) -->
         <section id="large-business-section" class="hidden">
             <!-- Hero Section with Gradient -->
-            <section class="bg-hero-gradient text-white p-8 md:p-12 rounded-2xl mb-8 shadow-lg text-center">
+            <section class="bg-hero-gradient text-white p-6 md:p-12 rounded-2xl mb-8 shadow-lg text-center">
                 <h2 class="text-3xl md:text-5xl font-extrabold mb-4">For Established & Scaling Businesses</h2>
                 <p class="text-lg md:text-xl font-light mb-6">
                     We help you streamline operations and find hidden profitability across all your branches.
@@ -431,9 +429,9 @@
             </section>
             
             <!-- Problem Section -->
-            <section class="bg-white p-8 md:p-10 rounded-2xl mb-8 shadow-lg">
-                <h3 class="text-2xl font-semibold color-navy mb-4 translate-y-3">Common Multi-Site Frustrations</h3>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-gray-700 font-medium text-center">
+            <section class="bg-white p-6 md:p-10 rounded-2xl mb-8 shadow-lg">
+                <h3 class="text-xl md:text-2xl font-semibold color-navy mb-4 translate-y-3">Common Multi-Site Frustrations</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 text-gray-700 font-medium text-sm md:text-base">
                     <div class="bg-gray-50 rounded-xl shadow-inner p-4 text-left flex items-start space-x-2">
                         <span class="text-xl font-extrabold color-pink">X</span>
                         <div>
@@ -468,9 +466,9 @@
             </section>
 
              <!-- Solution Section -->
-            <section id="services-large" class="bg-white p-8 md:p-10 rounded-2xl mb-8 shadow-lg">
-                <h3 class="text-2xl font-semibold color-navy mb-4">Periodic Insights, Not Yearly Surprises</h3>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-gray-700 font-medium">
+            <section id="services-large" class="bg-white p-6 md:p-10 rounded-2xl mb-8 shadow-lg">
+                <h3 class="text-xl md:text-2xl font-semibold color-navy mb-4">Periodic Insights, Not Yearly Surprises</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-gray-700 font-medium text-sm md:text-base">
                     <!-- Branch-level P&L analysis -->
                     <div class="p-6 bg-gray-50 rounded-xl shadow-inner">
                         <h4 class="font-bold text-lg color-purple mb-2">Branch-level P&L Analysis</h4>
@@ -494,9 +492,9 @@
                 </div>
             </section>
              <!-- Partnership Section -->
-            <section class="bg-white p-8 md:p-10 rounded-2xl mb-8 shadow-lg">
-                <h3 class="text-2xl font-semibold color-navy mb-4 translate-y-3 text-center">Partnership-Driven Solutions</h3>
-                <div class="text-center text-gray-700 font-medium">
+            <section class="bg-white p-6 md:p-10 rounded-2xl mb-8 shadow-lg">
+                <h3 class="text-xl md:text-2xl font-semibold color-navy mb-4 translate-y-3 text-center">Partnership-Driven Solutions</h3>
+                <div class="text-center text-gray-700 font-medium text-sm md:text-base">
                     <p class="mb-4">
                         We are business partners, not just service providers. We believe in collaboration, not disruption. We work seamlessly with your existing finance teams and accountants to provide the specific insights and automated reporting you need. Our goal is to work with and enhance what is already working.
                     </p>
@@ -509,8 +507,8 @@
             </section>
 
              <!-- Social Proof Section -->
-            <section class="bg-white p-8 md:p-10 rounded-2xl mb-8 shadow-lg">
-                <h3 class="text-2xl font-semibold color-navy mb-4">Social Proof</h3>
+            <section class="bg-white p-6 md:p-10 rounded-2xl mb-8 shadow-lg">
+                <h3 class="text-xl md:text-2xl font-semibold color-navy mb-4">Social Proof</h3>
                 <div id="testimonial-container-large">
                     <!-- Testimonial content will be injected here by JavaScript -->
                 </div>
@@ -520,7 +518,7 @@
         <!-- Local & Small Business Section (Previously Enterprise) -->
         <section id="local-business-section" class="hidden">
             <!-- Hero Section with Gradient -->
-            <section class="bg-hero-gradient text-white p-8 md:p-12 rounded-2xl mb-8 shadow-lg text-center">
+            <section class="bg-hero-gradient text-white p-6 md:p-12 rounded-2xl mb-8 shadow-lg text-center">
                 <h2 class="text-3xl md:text-5xl font-extrabold mb-4">For Small & Local Businesses</h2>
                 <p class="text-lg md:text-xl font-light mb-6">
                     We provide hands-on, local expertise to help you build a solid financial foundation and grow with confidence.
@@ -531,9 +529,9 @@
             </section>
             
             <!-- Frustrations Section -->
-            <section class="bg-white p-8 md:p-10 rounded-2xl mb-8 shadow-lg">
-                <h3 class="text-2xl font-semibold color-navy mb-4 translate-y-3">Common Local Business Frustrations</h3>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-gray-700 font-medium text-center">
+            <section class="bg-white p-6 md:p-10 rounded-2xl mb-8 shadow-lg">
+                <h3 class="text-xl md:text-2xl font-semibold color-navy mb-4 translate-y-3">Common Local Business Frustrations</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 text-gray-700 font-medium text-sm md:text-base">
                     <div class="bg-gray-50 rounded-xl shadow-inner p-4 text-left flex items-start space-x-2">
                         <span class="text-xl font-extrabold color-pink">X</span>
                         <div>
@@ -567,9 +565,9 @@
                 </div>
             </section>
             
-            <section class="bg-white p-8 md:p-10 rounded-2xl mb-8 shadow-lg text-center">
-                <h3 class="text-2xl font-semibold color-navy mb-4">Liberate Your Time with Smart Technology</h3>
-                <p class="text-gray-700 leading-relaxed mb-6">
+            <section class="bg-white p-6 md:p-10 rounded-2xl mb-8 shadow-lg text-center">
+                <h3 class="text-xl md:text-2xl font-semibold color-navy mb-4">Liberate Your Time with Smart Technology</h3>
+                <p class="text-gray-700 leading-relaxed mb-6 text-sm md:text-base">
                     Your time is your most valuable asset. We use cutting-edge, easy-to-use financial tools to automate the tedious tasks of bookkeeping and receipt collection. This means no more chasing paperwork or spending late nights on accounts. Instead, you get a real-time, accurate view of your finances, allowing you to focus entirely on serving your customers and growing your business.
                 </p>
                  <div class="mt-8 text-center">
@@ -580,8 +578,8 @@
             </section>
 
              <!-- Social Proof Section -->
-            <section class="bg-white p-8 md:p-10 rounded-2xl mb-8 shadow-lg">
-                <h3 class="text-2xl font-semibold color-navy mb-4">Social Proof</h3>
+            <section class="bg-white p-6 md:p-10 rounded-2xl mb-8 shadow-lg">
+                <h3 class="text-xl md:text-2xl font-semibold color-navy mb-4">Social Proof</h3>
                 <div id="testimonial-container-local">
                     <!-- Testimonial content will be injected here by JavaScript -->
                 </div>
@@ -590,9 +588,9 @@
 
 
         <!-- CTA Booking Section with direct link (Shared Section) -->
-        <section id="contact" class="bg-white p-8 md:p-10 rounded-2xl mb-8 shadow-lg text-center">
-            <h3 class="text-2xl font-semibold color-navy mb-2">Ready to find your hidden profit?</h3>
-            <p class="text-gray-700 mb-6">Book a free, no-obligation insight call directly via our calendar.</p>
+        <section id="contact" class="bg-white p-6 md:p-10 rounded-2xl mb-8 shadow-lg text-center">
+            <h3 class="text-xl md:text-2xl font-semibold color-navy mb-2">Ready to find your hidden profit?</h3>
+            <p class="text-gray-700 mb-6 text-sm md:text-base">Book a free, no-obligation insight call directly via our calendar.</p>
             <a href="https://calendar.app.google/L6sHRt4sCG25jvuL9" target="_blank" class="inline-block bg-cta-gradient text-white font-bold py-3 px-8 rounded-full shadow-lg hover:opacity-80 transition-opacity">
                 Book My Free Insight Call
             </a>
@@ -617,12 +615,12 @@
 
             <!-- Logos Block (Right - Only CIMA MIP remains) -->
             <div class="flex justify-center items-center space-x-6">
-                <!-- CIMA MIP Logo (Increased size: h-10, Inverted colors, Peers logo removed) -->
+                <!-- CIMA MIP Logo (Black/White on dark background) -->
                 <img 
                     id="cima-logo-footer"
                     src="" 
                     alt="CIMA Management Accounting Partner Logo" 
-                    class="h-10 filter-invert"
+                    class="h-8 md:h-10 filter-invert"
                 />
             </div>
         </div>
