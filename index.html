@@ -37,11 +37,12 @@
     <header class="bg-white shadow-lg rounded-b-xl p-4 md:p-6 mb-8 mx-auto max-w-7xl">
         <div class="flex items-center justify-between">
             <div class="flex items-center space-x-4">
-                <!-- LOGO REVERTED TO TEXT for preview compatibility. Replace with your logo image URL upon deployment. -->
-                <h1 class="text-2xl md:text-3xl font-bold color-navy">Peers LBC</h1>
+                <!-- LOGO - Reverted to text for display stability, will be replaced by JS on load -->
+                <h1 id="peers-logo-header" class="text-2xl md:text-3xl font-bold color-navy">Peers LBC</h1>
                 <span class="text-gray-500 text-sm md:text-base">Management Accounting Partners</span>
-                <!-- CIMA MIP Logo Placeholder - Replace src with actual logo link upon deployment -->
+                <!-- CIMA MIP Logo -->
                 <img 
+                    id="cima-logo-header"
                     src="https://placehold.co/100x32/ff5da2/ffffff?text=CIMA+MIP+Logo" 
                     alt="CIMA Management Accounting Partner Logo" 
                     class="h-6 md:h-8 border-l border-gray-300 pl-4"
@@ -96,6 +97,7 @@
             <div class="flex flex-col sm:flex-row justify-center items-center space-y-2 sm:space-y-0 sm:space-x-6 mt-8">
                 <span class="text-base font-semibold">CIMA Chartered & Management Accounting Partners</span>
                 <img 
+                    id="cima-logo-welcome"
                     src="https://placehold.co/100x32/ff5da2/ffffff?text=CIMA+MIP+Logo" 
                     alt="CIMA Management Accounting Partner Logo" 
                     class="h-6 bg-white p-1 rounded-md"
@@ -259,6 +261,7 @@
                 <!-- CIMA MIP Logo Above Commitments -->
                 <div class="flex justify-center mb-6">
                     <img 
+                        id="cima-logo-commitments"
                         src="https://placehold.co/100x32/ff5da2/ffffff?text=CIMA+MIP+Logo" 
                         alt="CIMA Management Accounting Partner Logo" 
                         class="h-8"
@@ -590,10 +593,16 @@
     <!-- Footer Section -->
     <footer class="bg-navy text-white rounded-t-xl py-6 px-4 text-center mx-auto max-w-7xl">
         <div class="flex justify-center items-center space-x-6 mb-4">
-            <!-- User Logo (Placeholder) -->
-            <h1 class="text-xl font-bold">Peers LBC</h1>
-            <!-- CIMA MIP Logo (Placeholder) -->
+            <!-- User Logo -->
             <img 
+                id="peers-logo-footer"
+                src="https://placehold.co/100x32/ff5da2/ffffff?text=Peers+LBC+Logo" 
+                alt="Peers LBC Logo" 
+                class="h-6"
+            />
+            <!-- CIMA MIP Logo -->
+            <img 
+                id="cima-logo-footer"
                 src="https://placehold.co/100x32/ff5da2/ffffff?text=CIMA+MIP+Logo" 
                 alt="CIMA Management Accounting Partner Logo" 
                 class="h-6"
@@ -613,8 +622,14 @@
         </div>
     </footer>
 
-    <!-- JavaScript to handle section visibility and dynamic testimonials -->
+    <!-- JavaScript to handle section visibility, dynamic testimonials, and logo loading -->
     <script>
+        // --- LOGO URLS (UPDATE THESE LINKS UPON DEPLOYMENT) ---
+        const PEERS_LOGO_URL = "https://drive.google.com/file/d/1axpO5GJPLD3QpgjZzqWxYw43DoyT2-83/view?usp=drive_link";
+        const CIMA_LOGO_URL = "https://drive.google.com/file/d/1QMJEVasISyzjGpWUUB8KLFGtwIkAaZBG/view?usp=drive_link";
+        
+        // --- TESTIMONIALS (CUSTOM CONTENT FOR EACH SECTION) ---
+        // Edit these arrays to update the testimonials on the site.
         const smallBusinessTestimonials = [
             {
                 quote: "Working with Peers LBC has been a game-changer. I finally understand where our money is going, which has helped us make smarter decisions about our cash flow and investments.",
@@ -656,6 +671,8 @@
             }
         ];
 
+        // --- CORE APPLICATION LOGIC ---
+
         function showSection(sectionId) {
             // Hide the welcome section
             document.getElementById('welcome-section').classList.add('hidden');
@@ -694,7 +711,21 @@
                 }
             }
 
-            // Display a random testimonial for all sections on load
+            // Function to load the logo images from the defined URLs
+            function loadLogos() {
+                // Main Peers LBC Logo replacements
+                document.getElementById('peers-logo-header').outerHTML = `<img id="peers-logo-header" src="${PEERS_LOGO_URL}" alt="Peers LBC Logo" class="h-6 md:h-8"/>`;
+                document.getElementById('peers-logo-footer').src = PEERS_LOGO_URL;
+
+                // CIMA MIP Logo replacements
+                document.getElementById('cima-logo-header').src = CIMA_LOGO_URL;
+                document.getElementById('cima-logo-welcome').src = CIMA_LOGO_URL;
+                document.getElementById('cima-logo-commitments').src = CIMA_LOGO_URL;
+                document.getElementById('cima-logo-footer').src = CIMA_LOGO_URL;
+            }
+
+            // Execute all functions on load
+            loadLogos();
             displayRandomTestimonial('testimonial-container-small', smallBusinessTestimonials);
             displayRandomTestimonial('testimonial-container-large', largeBusinessTestimonials);
             displayRandomTestimonial('testimonial-container-local', localTestimonials);
