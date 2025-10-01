@@ -29,6 +29,10 @@
         .bg-cta-gradient {
             background-image: linear-gradient(to right, #ff5da2, #ec3e91);
         }
+        /* Custom filter for inverting colors on a dark background */
+        .filter-invert {
+            filter: invert(100%);
+        }
     </style>
 </head>
 <body>
@@ -37,19 +41,19 @@
     <header class="bg-white shadow-lg rounded-b-xl p-4 md:p-6 mb-8 mx-auto max-w-7xl">
         <div class="flex items-center justify-between">
             <div class="flex items-center space-x-4">
-                <!-- Peers LBC Logo (Increased size: h-10/h-12) -->
+                <!-- Peers LBC Logo (Header: Now taller, removing border-l from next element) -->
                 <img 
                     id="peers-logo-header"
                     src="" 
                     alt="Peers LBC Logo" 
-                    class="h-10 md:h-12 w-auto"
+                    class="h-16 md:h-16 w-auto"
                 />
-                <!-- CIMA MIP Logo (Increased size: h-10/h-12, removed background class) -->
+                <!-- CIMA MIP Logo (Header: Now taller, border removed) -->
                 <img 
                     id="cima-logo-header"
                     src="" 
                     alt="CIMA Management Accounting Partner Logo" 
-                    class="h-10 md:h-12 border-l border-gray-300 pl-4"
+                    class="h-16 md:h-16 pl-4"
                 />
             </div>
             <nav class="flex space-x-2 md:space-x-4">
@@ -97,7 +101,7 @@
                 </button>
             </div>
 
-            <!-- CIMA MIP Trust Marker (Increased size: h-6 -> h-10, removed background class) -->
+            <!-- CIMA MIP Trust Marker (Increased size: h-10, background classes removed) -->
             <div class="flex flex-col sm:flex-row justify-center items-center space-y-2 sm:space-y-0 sm:space-x-6 mt-8">
                 <span class="text-base font-semibold">CIMA Chartered & Management Accounting Partners</span>
                 <img 
@@ -262,7 +266,7 @@
             <section class="bg-white p-8 md:p-10 rounded-2xl mb-8 shadow-lg">
                 <h3 class="text-2xl font-semibold color-navy mb-4 text-center">Our Core Commitments</h3>
                 
-                <!-- CIMA MIP Logo Above Commitments (Increased size: h-8 -> h-12, removed background class) -->
+                <!-- CIMA MIP Logo Above Commitments (Increased size: h-12, removed background class) -->
                 <div class="flex justify-center mb-6">
                     <img 
                         id="cima-logo-commitments"
@@ -490,7 +494,7 @@
             </section>
              <!-- Partnership Section -->
             <section class="bg-white p-8 md:p-10 rounded-2xl mb-8 shadow-lg">
-                <h3 class="text-2xl font-semibold color-navy mb-4 text-center">Partnership-Driven Solutions</h3>
+                <h3 class="text-2xl font-semibold color-navy mb-4 translate-y-3 text-center">Partnership-Driven Solutions</h3>
                 <div class="text-center text-gray-700 font-medium">
                     <p class="mb-4">
                         We are business partners, not just service providers. We believe in collaboration, not disruption. We work seamlessly with your existing finance teams and accountants to provide the specific insights and automated reporting you need. Our goal is to work with and enhance what is already working.
@@ -596,31 +600,40 @@
 
     <!-- Footer Section -->
     <footer class="bg-navy text-white rounded-t-xl py-6 px-4 text-center mx-auto max-w-7xl">
-        <div class="flex justify-center items-center space-x-6 mb-4">
-            <!-- User Logo (Increased size: h-6 -> h-10) -->
-            <img 
-                id="peers-logo-footer"
-                src="" 
-                alt="Peers LBC Logo" 
-                class="h-10"
-            />
-            <!-- CIMA MIP Logo (Increased size: h-6 -> h-10, removed background class) -->
-            <img 
-                id="cima-logo-footer"
-                src="" 
-                alt="CIMA Management Accounting Partner Logo" 
-                class="h-10"
-            />
+        <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0 md:space-x-6">
+            
+            <!-- Address/Links Block (Left/Center) -->
+            <div class="text-center md:text-left">
+                <div class="flex justify-center md:justify-start space-x-4 mb-2 text-sm">
+                    <span>Corby | Kettering | Market Harborough</span>
+                </div>
+                <div class="flex justify-center md:justify-start space-x-4 text-sm">
+                    <a href="javascript:void(0)" onclick="showSection('about')" class="hover:underline">About</a>
+                    <a href="javascript:void(0)" onclick="showSection('services-page')" class="hover:underline">Services</a>
+                    <a href="#contact" class="hover:underline">Contact</a>
+                </div>
+            </div>
+
+            <!-- Logos Block (Right) -->
+            <div class="flex justify-center items-center space-x-6">
+                <!-- User Logo (Increased size: h-10, Inverted colors) -->
+                <img 
+                    id="peers-logo-footer"
+                    src="" 
+                    alt="Peers LBC Logo" 
+                    class="h-10 filter-invert"
+                />
+                <!-- CIMA MIP Logo (Increased size: h-10, Inverted colors) -->
+                <img 
+                    id="cima-logo-footer"
+                    src="" 
+                    alt="CIMA Management Accounting Partner Logo" 
+                    class="h-10 filter-invert"
+                />
+            </div>
         </div>
-        <div class="flex justify-center space-x-4 mb-2 text-sm">
-            <span>Corby | Kettering | Market Harborough</span>
-        </div>
-        <div class="flex justify-center space-x-4 mb-2 text-sm">
-            <a href="javascript:void(0)" onclick="showSection('about')" class="hover:underline">About</a>
-            <a href="javascript:void(0)" onclick="showSection('services-page')" class="hover:underline">Services</a>
-            <a href="#contact" class="hover:underline">Contact</a>
-        </div>
-        <div class="text-xs text-gray-400 mt-4">
+
+        <div class="text-xs text-gray-400 mt-4 pt-4 border-t border-gray-700">
             <p>&copy; 2024 Peers LBC. All rights reserved.</p>
             <p>CIMA Chartered | ICO Registered | Terms</p>
         </div>
