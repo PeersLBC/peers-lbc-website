@@ -37,9 +37,16 @@
     <header class="bg-white shadow-lg rounded-b-xl p-4 md:p-6 mb-8 mx-auto max-w-7xl">
         <div class="flex items-center justify-between">
             <div class="flex items-center space-x-4">
-                <!-- LOGO - Reverted to text for display stability, will be replaced by JS on load -->
-                <h1 id="peers-logo-header" class="text-2xl md:text-3xl font-bold color-navy">Peers LBC</h1>
-                <span class="text-gray-500 text-sm md:text-base">Management Accounting Partners</span>
+                <!-- Peers LBC Logo (Container for image injection) -->
+                <div id="peers-logo-title-container" class="flex items-center space-x-2">
+                    <img 
+                        id="peers-logo-header"
+                        src="https://placehold.co/100x32/ff5da2/ffffff?text=Peers+LBC+Logo" 
+                        alt="Peers LBC Logo" 
+                        class="h-6 md:h-8"
+                    />
+                    <span id="peers-tagline" class="text-gray-500 text-sm md:text-base hidden sm:block">Management Accounting Partners</span>
+                </div>
                 <!-- CIMA MIP Logo -->
                 <img 
                     id="cima-logo-header"
@@ -713,8 +720,20 @@
 
             // Function to load the logo images from the defined URLs
             function loadLogos() {
-                // Main Peers LBC Logo replacements
-                document.getElementById('peers-logo-header').outerHTML = `<img id="peers-logo-header" src="${PEERS_LOGO_URL}" alt="Peers LBC Logo" class="h-6 md:h-8"/>`;
+                // Peers LBC Logo replacement in Header (removing text title/tagline)
+                const peersLogoHeader = document.getElementById('peers-logo-header');
+                const peersTagline = document.getElementById('peers-tagline');
+
+                // Update the image source
+                peersLogoHeader.src = PEERS_LOGO_URL;
+                peersLogoHeader.classList.add('w-auto', 'h-8'); // Add sizing classes if needed
+
+                // Remove the tagline text (but keep the container for styling)
+                if (peersTagline) {
+                    peersTagline.classList.add('hidden');
+                }
+                
+                // Footer Logo
                 document.getElementById('peers-logo-footer').src = PEERS_LOGO_URL;
 
                 // CIMA MIP Logo replacements
