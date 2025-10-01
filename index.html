@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peers LBC | Management Accounting Partners</title>
+    <!-- Use Tailwind CSS for rapid, responsive styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Use Inter font from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Custom Brand Colors for Tailwind */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f9fa;
+        }
+        .color-navy { color: #000d6b; }
+        .bg-navy { background-color: #000d6b; }
+        .color-purple { color: #9c19e0; }
+        .bg-purple { background-color: #9c19e0; }
+        .color-pink { color: #ff5da2; }
+        .bg-pink { background-color: #ff5da2; }
+        /* Gradients */
+        .bg-hero-gradient {
+            background-image: linear-gradient(to bottom, #000d6b, #9c19e0);
+        }
+        .bg-cta-gradient {
+            background-image: linear-gradient(to right, #ff5da2, #ec3e91);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="bg-white shadow-lg rounded-b-xl p-4 md:p-6 mb-8 mx-auto max-w-7xl">
+        <div class="flex items-center justify-between">
+            <div class="flex items-center space-x-4">
+                <!-- LOGO REVERTED TO TEXT for preview compatibility. Replace with your logo image URL upon deployment. -->
+                <h1 class="text-2xl md:text-3xl font-bold color-navy">Peers LBC</h1>
+                <span class="text-gray-500 text-sm md:text-base">Management Accounting Partners</span>
+                <!-- CIMA MIP Logo Placeholder - Replace src with actual logo link upon deployment -->
+                <img 
+                    src="https://placehold.co/100x32/ff5da2/ffffff?text=CIMA+MIP+Logo" 
+                    alt="CIMA Management Accounting Partner Logo" 
+                    class="h-6 md:h-8 border-l border-gray-300 pl-4"
+                />
+            </div>
+            <nav class="flex space-x-2 md:space-x-4">
+                <a href="javascript:void(0)" onclick="showSection('about')" class="color-navy hover:text-gray-600 font-medium px-2 py-1 rounded-lg transition-colors">About</a>
+                <a href="javascript:void(0)" onclick="showSection('services-page')" class="color-navy hover:text-gray-600 font-medium px-2 py-1 rounded-lg transition-colors">Services</a>
+                <a href="#contact" class="color-navy hover:text-gray-600 font-medium px-2 py-1 rounded-lg transition-colors">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Section -->
+    <main class="container mx-auto px-4">
+        
+        <!-- Welcome Section with Business Size Choice (Home Page) -->
+        <section id="welcome-section" class="bg-hero-gradient text-white p-8 md:p-12 rounded-2xl mb-8 shadow-lg text-center">
+            <h2 class="text-3xl md:text-5xl font-extrabold mb-4">Your profit is there. Let us find it.</h2>
+            <p class="text-lg md:text-xl font-light mb-6">
+                Management accounting for ambitious Northamptonshire businesses. We turn your financial data into growth decisions.
+            </p>
+            <h3 class="2xl font-semibold mb-4">What best describes your business?</h3>
+            <p class="mb-6">
+                Choose the option that best describes your business to see the services most relevant to you.
+            </p>
+
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-8">
+                <button onclick="showSection('small-business-section')" class="bg-navy text-white font-bold py-4 px-8 rounded-full shadow-lg hover:opacity-80 transition-opacity flex flex-col items-center text-left">
+                    <span class="text-xl font-bold mb-1">Growing Businesses & Founders</span>
+                    <ul class="list-disc list-inside text-sm font-light text-gray-300 mx-auto">
+                        <li>Start-ups with ambitious goals.</li>
+                    </ul>
+                </button>
+                <button onclick="showSection('large-business-section')" class="bg-purple text-white font-bold py-4 px-8 rounded-full shadow-lg hover:opacity-80 transition-opacity flex flex-col items-center text-left">
+                    <span class="text-xl font-bold mb-1">Established & Scaling Businesses</span>
+                    <ul class="list-disc list-inside text-sm font-light text-gray-300 mx-auto">
+                        <li>Multi-site businesses</li>
+                        <li>Performance management</li>
+                    </ul>
+                </button>
+                <button onclick="showSection('local-business-section')" class="bg-pink text-white font-bold py-4 px-8 rounded-full shadow-lg hover:opacity-80 transition-opacity flex flex-col items-center text-left">
+                    <span class="text-xl font-bold mb-1">Small & Local Business</span>
+                    <ul class="list-disc list-inside text-sm font-light text-gray-300 mx-auto">
+                        <li>Community-focused</li>
+                        <li>Local expertise</li>
+                    </ul>
+                </button>
+            </div>
+
+            <!-- CIMA MIP Trust Marker -->
+            <div class="flex flex-col sm:flex-row justify-center items-center space-y-2 sm:space-y-0 sm:space-x-6 mt-8">
+                <span class="text-base font-semibold">CIMA Chartered & Management Accounting Partners</span>
+                <img 
+                    src="https://placehold.co/100x32/ff5da2/ffffff?text=CIMA+MIP+Logo" 
+                    alt="CIMA Management Accounting Partner Logo" 
+                    class="h-6 bg-white p-1 rounded-md"
+                />
+            </div>
+        </section>
+        
+        <!-- Services Comparison Page (New) -->
+        <section id="services-page" class="hidden">
+            <section class="bg-hero-gradient text-white p-8 md:p-12 rounded-2xl mb-8 shadow-lg text-center">
+                <h2 class="text-3xl md:text-5xl font-extrabold mb-4">Our Service Packages</h2>
+                <p class="text-lg md:text-xl font-light mb-6">
+                    We offer three distinct service packages designed to fit your business at every stage of its journey.
+                </p>
+            </section>
+            <section class="bg-white p-8 md:p-10 rounded-2xl mb-8 shadow-lg text-center">
+                <h3 class="text-2xl font-semibold color-navy mb-4">Your Business Is Unique. Your Financial Partnership Should Be Too.</h3>
+                <p class="text-gray-700 leading-relaxed max-w-2xl mx-auto">
+                    We believe that every business is as unique as its owner. The packages below are a powerful starting point, but they are fully customizable. We work with you to build a tailored solution that addresses your specific challenges and helps you achieve your goals.
+                </p>
+            </section>
+            <section class="bg-white p-8 md:p-10 rounded-2xl mb-8 shadow-lg">
+                <h3 class="text-2xl font-semibold color-navy mb-4 text-center">Find a Package That Fits Your Needs</h3>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left table-auto border-separate border-spacing-x-4 border-spacing-y-2">
+                        <thead>
+                            <tr class="bg-gray-100 rounded-lg">
+                                <th class="py-4 px-2 font-semibold color-navy rounded-l-xl">Service</th>
+                                <th class="py-4 px-2 font-semibold color-purple text-center">Foundational</th>
+                                <th class="py-4 px-2 font-semibold color-purple text-center">Growth</th>
+                                <th class="py-4 px-2 font-semibold color-purple text-center rounded-r-xl">Enterprise</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Foundational Services (Included in all) -->
+                            <tr class="font-semibold color-navy">
+                                <td colspan="4" class="py-2 px-2 bg-gray-200 rounded-lg">Core Accounting & Partnership</td>
+                            </tr>
+                            <tr>
+                                <td class="py-2 px-2 color-navy">Bookkeeping & Account Management</td>
+                                <td class="py-2 px-2 text-center text-purple-600">&#x2714;</td>
+                                <td class="py-2 px-2 text-center text-purple-600">&#x2714;</td>
+                                <td class="py-2 px-2 text-center text-purple-600">&#x2714;</td>
+                            </tr>
+                            <tr>
+                                <td class="py-2 px-2 color-navy">Budget Planning & Cashflow Management</td>
+                                <td class="py-2 px-2 text-center text-purple-600">&#x2714;</td>
+                                <td class="py-2 px-2 text-center text-purple-600">&#x2714;</td>
+                                <td class="py-2 px-2 text-center text-purple-600">&#x2714;</td>
+                            </tr>
+                            <tr>
+                                <td class="py-2 px-2 color-navy">Accessible & Regular Support</td>
+                                <td class="py-2 px-2 text-center text-purple-600">&#x2714;</td>
+                                <td class="py-2 px-2 text-center text-purple-600">&#x2714;</td>
+                                <td class="py-2 px-2 text-center text-purple-600">&#x2714;</td>
+                            </tr>
+                            
+                            <!-- Growth Services (Included in Growth and Enterprise) -->
+                            <tr class="font-semibold color-navy">
+                                <td colspan="4" class="py-2 px-2 bg-gray-200 rounded-lg mt-4">Growth & Strategic Planning</td>
+                            </tr>
+                            <tr>
+                                <td class="py-2 px-2 color-navy">Funding-Ready Accounts</td>
+                                <td class="py-2 px-2 text-center">-</td>
+                                <td class="py-2 px-2 text-center text-purple-600">&#x2714;</td>
+                                <td class="py-2 px-2 text-center text-purple-600">&#x2714;</td>
+                            </tr>
+                            <tr>
+                                <td class="py-2 px-2 color-navy">Cash Flow Forecasting & Modeling</td>
+                                <td class="py-2 px-2 text-center">-</td>
+                                <td class="py-2 px-2 text-center text-purple-600">&#x2714;</td>
+                                <td class="py-2 px-2 text-center text-purple-600">&#x2714;</td>
+                            </tr>
+                            <tr>
+                                <td class="py-2 px-2 color-navy">Manager P&L Training</td>
+                                <td class="py-2 px-2 text-center">-</td>
+                                <td class="py-2 px-2 text-center text-purple-600">&#x2714;</td>
+                                <td class="py-2 px-2 text-center text-purple-600">&#x2714;</td>
+                            </tr>
+                            
+                            <!-- Enterprise Services (Included in Enterprise only) -->
+                            <tr class="font-semibold color-navy">
+                                <td colspan="4" class="py-2 px-2 bg-gray-200 rounded-lg mt-4">Enterprise & Automation Solutions</td>
+                            </tr>
+                            <tr>
+                                <td class="py-2 px-2 color-navy">Branch/Segment-level P&L Analysis</td>
+                                <td class="py-2 px-2 text-center">-</td>
+                                <td class="py-2 px-2 text-center">-</td>
+                                <td class="py-2 px-2 text-center text-purple-600">&#x2714;</td>
+                            </tr>
+                            <tr>
+                                <td class="py-2 px-2 color-navy">Automated Reporting & Data Integration</td>
+                                <td class="py-2 px-2 text-center">-</td>
+                                <td class="py-2 px-2 text-center">-</td>
+                                <td class="py-2 px-2 text-center text-purple-600">&#x2714;</td>
+                            </tr>
+                            <tr>
+                                <td class="py-2 px-2 color-navy">Data Science Integration & Advanced Insights</td>
+                                <td class="py-2 px-2 text-center">-</td>
+                                <td class="py-2 px-2 text-center">-</td>
+                                <td class="py-2 px-2 text-center text-purple-600">&#x2714;</td>
+                            </tr>
+                            <tr>
+                                <td class="py-2 px-2 color-navy">Proactive, Strategic Advice</td>
+                                <td class="py-2 px-2 text-center">-</td>
+                                <td class="py-2 px-2 text-center">-</td>
+                                <td class="py-2 px-2 text-center text-purple-600">&#x2714;</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="mt-10 text-center">
+                    <h4 class="text-lg font-bold color-navy mb-4">Ready for a tailored solution?</h4>
+                    <a href="https://calendar.app.google/L6sHRt4sCG25jvuL9" target="_blank" class="inline-block bg-cta-gradient text-white font-bold py-3 px-8 rounded-full shadow-lg hover:opacity-80 transition-opacity">
+                        Book My Free Insight Call
+                    </a>
+                </div>
+            </section>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="hidden">
+            <section class="bg-hero-gradient text-white p-8 md:p-12 rounded-2xl mb-8 shadow-lg text-center">
+                <h2 class="text-3xl md:text-5xl font-extrabold mb-4">Peers LBC: Chartered Partnership. Lifelong Growth.</h2>
+                <p class="text-lg md:text-xl font-light mb-6">
+                    Our team is committed to delivering precision, insight, and a partnership that grows with you.
+                </p>
+            </section>
+
+            <!-- Mission and Vision Section -->
+            <section class="bg-white p-8 md:p-10 rounded-2xl mb-8 shadow-lg">
+                <h3 class="text-2xl font-semibold color-navy mb-4 text-center">Our Mission and Vision</h3>
+                <div class="text-gray-700 leading-relaxed max-w-4xl mx-auto space-y-4">
+                    <p>
+                        The core difference between established big corporates and the SMEs that drive our community isn't potential; it's how their financial information is <span class="font-bold">managed and used to drive decisions.</span>
+                    </p>
+                    <p>
+                        As start-ups grow and the number of plates that founders are juggling increases, our vision is clear: to provide the sophisticated financial tools that corporations use to keep an unlimited amount of these plates spinning, and put them in the hands of the <span class="font-bold">founders who keep our communities unique.</span>
+                    </p>
+                    <p>
+                        Finance is the crucial connection that brings all parts of a business together—it is the information that tells you the past, present, and the future. Our goal is to empower you to drive your business in the direction it needs to go.
+                    </p>
+                    <p>
+                        Accountants have historically been reactive. Our vision is to be your <span class="font-bold">proactive business partner,</span> regularly in contact, providing insight, and ensuring all regulatory requirements are sorted in advance so you can focus on maximizing your business impact.
+                    </p>
+                    <p class="text-center font-semibold mt-6">
+                        We draw on experience ranging from start-ups to listed companies to give SMEs the ability to scale and grow sustainably for long-term success.
+                    </p>
+                </div>
+                <!-- Added CTA button here -->
+                <div class="mt-8 text-center">
+                    <a href="https://calendar.app.google/L6sHRt4sCG25jvuL9" target="_blank" class="inline-block bg-cta-gradient text-white font-bold py-3 px-8 rounded-full shadow-lg hover:opacity-80 transition-opacity">
+                        Book My Free Insight Call
+                    </a>
+                </div>
+            </section>
+
+            <section class="bg-white p-8 md:p-10 rounded-2xl mb-8 shadow-lg">
+                <h3 class="text-2xl font-semibold color-navy mb-4 text-center">Our Core Commitments</h3>
+                
+                <!-- CIMA MIP Logo Above Commitments -->
+                <div class="flex justify-center mb-6">
+                    <img 
+                        src="https://placehold.co/100x32/ff5da2/ffffff?text=CIMA+MIP+Logo" 
+                        alt="CIMA Management Accounting Partner Logo" 
+                        class="h-8"
+                    />
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-gray-700 font-medium text-center">
+                    <div class="bg-gray-50 rounded-xl shadow-inner p-6">
+                        <h4 class="font-bold text-lg color-purple mb-2">Expert & Chartered</h4>
+                        <p class="text-sm">As Chartered CIMA accountants, we are dedicated to the highest standards of accuracy and professional conduct in management accounting.</p>
+                    </div>
+                    <div class="bg-gray-50 rounded-xl shadow-inner p-6">
+                        <h4 class="font-bold text-lg color-purple mb-2">Local Roots, National Reach</h4>
+                        <p class="text-sm">We are locally rooted in Northamptonshire, investing in community talent, but our team is equipped to serve your business efficiently no matter where you are based.</p>
+                    </div>
+                    <div class="p-6 bg-gray-50 rounded-xl shadow-inner">
+                        <h4 class="font-bold text-lg color-purple mb-2">Focused on You</h4>
+                        <p class="text-sm">We're committed to building lifelong relationships with our clients, providing consistent and proactive support rather than prioritizing quick fixes.</p>
+                    </div>
+                </div>
+
+                <div class="text-center text-gray-700 leading-relaxed mt-12 max-w-2xl mx-auto">
+                    <h3 class="text-2xl font-semibold color-navy mb-4">Our Unique Approach: Data Science Integration</h3>
+                    <p>We apply data science knowledge to accountancy, translating complex financial information into real-world, people-centered insights. We don't just crunch numbers; we help you understand what they mean for your business and your team.</p>
+                </div>
+                
+                 <div class="mt-8 text-center">
+                    <a href="https://calendar.app.google/L6sHRt4sCG25jvuL9" target="_blank" class="inline-block bg-cta-gradient text-white font-bold py-3 px-8 rounded-full shadow-lg hover:opacity-80 transition-opacity">
+                        Book My Free Insight Call
+                    </a>
+                </div>
+            </section>
+        </section>
+
+        <!-- Growing Businesses Section (Initially Hidden) -->
+        <section id="small-business-section" class="hidden">
+             <!-- Hero Section with Gradient -->
+            <section class="bg-hero-gradient text-white p-8 md:p-12 rounded-2xl mb-8 shadow-lg text-center">
+                <h2 class="text-3xl md:text-5xl font-extrabold mb-4">For Ambitious Start-ups & Local Businesses</h2>
+                <p class="text-lg md:text-xl font-light mb-6">
+                    We help you build a solid financial foundation and secure your future growth.
+                </p>
+                <a href="https://calendar.app.google/L6sHRt4sCG25jvuL9" target="_blank" class="inline-block bg-cta-gradient text-white font-bold py-3 px-8 rounded-full shadow-lg hover:opacity-80 transition-opacity">
+                    Get Your Free Financial Insight
+                </a>
+            </section>
+            <!-- Services Section for Growing Businesses -->
+            <section class="bg-white p-8 md:p-10 rounded-2xl mb-8 shadow-lg">
+                <h3 class="text-2xl font-semibold color-navy mb-4 text-center">Setting up the foundations for new and local businesses</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-gray-700 font-medium">
+                    <div class="p-6 bg-gray-50 rounded-xl shadow-inner text-center">
+                        <h4 class="font-bold text-lg color-purple mb-2">Bookkeeping</h4>
+                        <p class="text-sm">We handle your day-to-day financial records so you can focus on building your business.</p>
+                    </div>
+                    <div class="p-6 bg-gray-50 rounded-xl shadow-inner text-center">
+                        <h4 class="font-bold text-lg color-purple mb-2">Budget planning</h4>
+                        <p class="text-sm">Create a realistic financial roadmap to manage your spending and hit your growth targets.</p>
+                    </div>
+                    <div class="p-6 bg-gray-50 rounded-xl shadow-inner text-center">
+                        <h4 class="font-bold text-lg color-purple mb-2">Cashflow management</h4>
+                        <p class="text-sm">Get real-time insights into your cashflow to prevent surprises and maintain liquidity.</p>
+                    </div>
+                     <div class="p-6 bg-gray-50 rounded-xl shadow-inner text-center">
+                        <h4 class="font-bold text-lg color-purple mb-2">General ledger creation</h4>
+                        <p class="text-sm">Set up a clean and accurate general ledger that provides a clear overview of your finances.</p>
+                    </div>
+                </div>
+                <div class="mt-8 text-center">
+                    <a href="https://calendar.app.google/L6sHRt4sCG25jvuL9" target="_blank" class="inline-block bg-cta-gradient text-white font-bold py-3 px-8 rounded-full shadow-lg hover:opacity-80 transition-opacity">
+                        Book My Free Insight Call
+                    </a>
+                </div>
+            </section>
+             <!-- Problem Section -->
+            <section class="bg-white p-8 md:p-10 rounded-2xl mb-8 shadow-lg">
+                <h3 class="text-2xl font-semibold color-navy mb-4 text-center">Common New Business Frustrations</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-gray-700 font-medium text-center">
+                    <div class="bg-gray-50 rounded-xl shadow-inner p-4 text-left flex items-start space-x-2">
+                        <span class="text-xl font-extrabold color-pink">X</span>
+                        <div>
+                            <p class="font-bold color-navy mb-1">Sales are up but it feels like we are making no money</p>
+                        </div>
+                    </div>
+                    <div class="bg-gray-50 rounded-xl shadow-inner p-4 text-left flex items-start space-x-2">
+                        <span class="text-xl font-extrabold color-pink">X</span>
+                        <div>
+                            <p class="font-bold color-navy mb-1">Completing accounts is a burden</p>
+                        </div>
+                    </div>
+                    <div class="bg-gray-50 rounded-xl shadow-inner p-4 text-left flex items-start space-x-2">
+                        <span class="text-xl font-extrabold color-pink">X</span>
+                        <div>
+                            <p class="font-bold color-navy mb-1">Cashflow management - Paying people before we get paid</p>
+                        </div>
+                    </div>
+                    <div class="bg-gray-50 rounded-xl shadow-inner p-4 text-left flex items-start space-x-2">
+                        <span class="text-xl font-extrabold color-pink">X</span>
+                        <div>
+                            <p class="font-bold color-navy mb-1">Keeping track of expenses</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-8 text-center">
+                    <h4 class="text-lg font-bold color-navy mb-4">Ready to turn these frustrations into growth?</h4>
+                    <a href="https://calendar.app.google/L6sHRt4sCG25jvuL9" target="_blank" class="inline-block bg-cta-gradient text-white font-bold py-3 px-8 rounded-full shadow-lg hover:opacity-80 transition-opacity">
+                        Book My Free Insight Call
+                    </a>
+                </div>
+            </section>
+
+            <!-- Solution Section -->
+            <section id="services" class="bg-white p-8 md:p-10 rounded-2xl mb-8 shadow-lg">
+                <h3 class="text-2xl font-semibold color-navy mb-4">Growth Focused Insights for Founders</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-gray-700 font-medium">
+                    <!-- Funding-ready accounts -->
+                    <div class="p-6 bg-gray-50 rounded-xl shadow-inner">
+                        <h4 class="font-bold text-lg color-purple mb-2">Funding-Ready Accounts</h4>
+                        <p class="text-sm">We prepare your financial statements to meet investor requirements, helping you secure the capital you need to scale.</p>
+                    </div>
+                    <!-- Cash flow forecasting -->
+                    <div class="p-6 bg-gray-50 rounded-xl shadow-inner">
+                        <h4 class="font-bold text-lg color-purple mb-2">Cash Flow Forecasting</h4>
+                        <p class="text-sm">We provide clear, forward-looking insights to help you manage liquidity, plan for future spending, and avoid cash shortages.</p>
+                    </div>
+                    <!-- Growth scenario modeling -->
+                    <div class="p-6 bg-gray-50 rounded-xl shadow-inner">
+                        <h4 class="font-bold text-lg color-purple mb-2">Growth Scenario Modeling</h4>
+                        <p class="text-sm">We help you model different growth scenarios so you can make confident decisions on expansion, new hires, and product development.</p>
+                    </div>
+                </div>
+                <div class="mt-8 text-center">
+                    <a href="https://calendar.app.google/L6sHRt4sCG25jvuL9" target="_blank" class="inline-block bg-cta-gradient text-white font-bold py-3 px-8 rounded-full shadow-lg hover:opacity-80 transition-opacity">
+                        Book My Free Insight Call
+                    </a>
+                </div>
+            </section>
+            
+            <!-- Social Proof Section -->
+            <section class="bg-white p-8 md:p-10 rounded-2xl mb-8 shadow-lg">
+                <h3 class="text-2xl font-semibold color-navy mb-4">Social Proof</h3>
+                <div id="testimonial-container-small">
+                    <!-- Testimonial content will be injected here by JavaScript -->
+                </div>
+            </section>
+        </section>
+
+        <!-- Established & Scaling Businesses Section (Initially Hidden) -->
+        <section id="large-business-section" class="hidden">
+            <!-- Hero Section with Gradient -->
+            <section class="bg-hero-gradient text-white p-8 md:p-12 rounded-2xl mb-8 shadow-lg text-center">
+                <h2 class="text-3xl md:text-5xl font-extrabold mb-4">For Established & Scaling Businesses</h2>
+                <p class="text-lg md:text-xl font-light mb-6">
+                    We help you streamline operations and find hidden profitability across all your branches.
+                </p>
+                <a href="https://calendar.app.google/L6sHRt4sCG25jvuL9" target="_blank" class="inline-block bg-cta-gradient text-white font-bold py-3 px-8 rounded-full shadow-lg hover:opacity-80 transition-opacity">
+                    Get Your Free Financial Insight
+                </a>
+            </section>
+            
+            <!-- Problem Section -->
+            <section class="bg-white p-8 md:p-10 rounded-2xl mb-8 shadow-lg">
+                <h3 class="text-2xl font-semibold color-navy mb-4 text-center">Common Multi-Site Frustrations</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-gray-700 font-medium text-center">
+                    <div class="bg-gray-50 rounded-xl shadow-inner p-4 text-left flex items-start space-x-2">
+                        <span class="text-xl font-extrabold color-pink">X</span>
+                        <div>
+                            <p class="font-bold color-navy mb-1">Your business is doing well, but you don’t know which locations are truly profitable.</p>
+                        </div>
+                    </div>
+                    <div class="bg-gray-50 rounded-xl shadow-inner p-4 text-left flex items-start space-x-2">
+                        <span class="text-xl font-extrabold color-pink">X</span>
+                        <div>
+                            <p class="font-bold color-navy mb-1">Manual, ad-hoc reporting means questions are only answered on the fly.</p>
+                        </div>
+                    </div>
+                    <div class="bg-gray-50 rounded-xl shadow-inner p-4 text-left flex items-start space-x-2">
+                        <span class="text-xl font-extrabold color-pink">X</span>
+                        <div>
+                            <p class="font-bold color-navy mb-1">Managers don’t feel in control of their own profitability.</p>
+                        </div>
+                    </div>
+                    <div class="bg-gray-50 rounded-xl shadow-inner p-4 text-left flex items-start space-x-2">
+                        <span class="text-xl font-extrabold color-pink">X</span>
+                        <div>
+                            <p class="font-bold color-navy mb-1">Accounts show you how you did last year, not how to grow today.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-8 text-center">
+                    <h4 class="text-lg font-bold color-navy mb-4">Ready to turn these frustrations into growth?</h4>
+                    <a href="https://calendar.app.google/L6sHRt4sCG25jvuL9" target="_blank" class="inline-block bg-cta-gradient text-white font-bold py-3 px-8 rounded-full shadow-lg hover:opacity-80 transition-opacity">
+                        Book My Free Insight Call
+                    </a>
+                </div>
+            </section>
+
+             <!-- Solution Section -->
+            <section id="services-large" class="bg-white p-8 md:p-10 rounded-2xl mb-8 shadow-lg">
+                <h3 class="text-2xl font-semibold color-navy mb-4">Periodic Insights, Not Yearly Surprises</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-gray-700 font-medium">
+                    <!-- Branch-level P&L analysis -->
+                    <div class="p-6 bg-gray-50 rounded-xl shadow-inner">
+                        <h4 class="font-bold text-lg color-purple mb-2">Branch-level P&L Analysis</h4>
+                        <p class="text-sm">We provide detailed profit and loss statements for each branch, helping you identify underperforming locations and optimize profitability.</p>
+                    </div>
+                    <!-- Manager accountability training -->
+                    <div class="p-6 bg-gray-50 rounded-xl shadow-inner">
+                        <h4 class="font-bold text-lg color-purple mb-2">Manager P&L Training</h4>
+                        <p class="text-sm">We empower your managers to understand their branch's financial performance, fostering accountability and data-driven decisions.</p>
+                    </div>
+                    <!-- Automated reporting -->
+                    <div class="p-6 bg-gray-50 rounded-xl shadow-inner">
+                        <h4 class="font-bold text-lg color-purple mb-2">Automated Reporting</h4>
+                        <p class="text-sm">We streamline your reporting processes, providing automated, real-time insights across all sites to save you time and ensure accuracy.</p>
+                    </div>
+                </div>
+                <div class="mt-8 text-center">
+                    <a href="https://calendar.app.google/L6sHRt4sCG25jvuL9" target="_blank" class="inline-block bg-cta-gradient text-white font-bold py-3 px-8 rounded-full shadow-lg hover:opacity-80 transition-opacity">
+                        Book My Free Insight Call
+                    </a>
+                </div>
+            </section>
+             <!-- Partnership Section -->
+            <section class="bg-white p-8 md:p-10 rounded-2xl mb-8 shadow-lg">
+                <h3 class="text-2xl font-semibold color-navy mb-4 text-center">Partnership-Driven Solutions</h3>
+                <div class="text-center text-gray-700 font-medium">
+                    <p class="mb-4">
+                        We are business partners, not just service providers. We believe in collaboration, not disruption. We work seamlessly with your existing finance teams and accountants to provide the specific insights and automated reporting you need. Our goal is to work with and enhance what is already working.
+                    </p>
+                </div>
+                <div class="mt-8 text-center">
+                    <a href="https://calendar.app.google/L6sHRt4sCG25jvuL9" target="_blank" class="inline-block bg-cta-gradient text-white font-bold py-3 px-8 rounded-full shadow-lg hover:opacity-80 transition-opacity">
+                        Book My Free Insight Call
+                    </a>
+                </div>
+            </section>
+
+             <!-- Social Proof Section -->
+            <section class="bg-white p-8 md:p-10 rounded-2xl mb-8 shadow-lg">
+                <h3 class="text-2xl font-semibold color-navy mb-4">Social Proof</h3>
+                <div id="testimonial-container-large">
+                    <!-- Testimonial content will be injected here by JavaScript -->
+                </div>
+            </section>
+        </section>
+
+        <!-- Local & Small Business Section (Previously Enterprise) -->
+        <section id="local-business-section" class="hidden">
+            <!-- Hero Section with Gradient -->
+            <section class="bg-hero-gradient text-white p-8 md:p-12 rounded-2xl mb-8 shadow-lg text-center">
+                <h2 class="text-3xl md:text-5xl font-extrabold mb-4">For Small & Local Businesses</h2>
+                <p class="text-lg md:text-xl font-light mb-6">
+                    We provide hands-on, local expertise to help you build a solid financial foundation and grow with confidence.
+                </p>
+                <a href="https://calendar.app.google/L6sHRt4sCG25jvuL9" target="_blank" class="inline-block bg-cta-gradient text-white font-bold py-3 px-8 rounded-full shadow-lg hover:opacity-80 transition-opacity">
+                        Get Your Free Financial Insight
+                    </a>
+            </section>
+            
+            <!-- Frustrations Section -->
+            <section class="bg-white p-8 md:p-10 rounded-2xl mb-8 shadow-lg">
+                <h3 class="text-2xl font-semibold color-navy mb-4 text-center">Common Local Business Frustrations</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-gray-700 font-medium text-center">
+                    <div class="bg-gray-50 rounded-xl shadow-inner p-4 text-left flex items-start space-x-2">
+                        <span class="text-xl font-extrabold color-pink">X</span>
+                        <div>
+                            <p class="font-bold color-navy mb-1">Spending all your time on bookkeeping instead of serving customers</p>
+                        </div>
+                    </div>
+                    <div class="bg-gray-50 rounded-xl shadow-inner p-4 text-left flex items-start space-x-2">
+                        <span class="text-xl font-extrabold color-pink">X</span>
+                        <div>
+                            <p class="font-bold color-navy mb-1">Feeling isolated and needing a trusted financial partner</p>
+                        </div>
+                    </div>
+                    <div class="bg-gray-50 rounded-xl shadow-inner p-4 text-left flex items-start space-x-2">
+                        <span class="text-xl font-extrabold color-pink">X</span>
+                        <div>
+                            <p class="font-bold color-navy mb-1">Being constantly chased for receipts and paperwork from months ago</p>
+                        </div>
+                    </div>
+                    <div class="bg-gray-50 rounded-xl shadow-inner p-4 text-left flex items-start space-x-2">
+                        <span class="text-xl font-extrabold color-pink">X</span>
+                        <div>
+                            <p class="font-bold color-navy mb-1">Manual processes taking away from a personal approach</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-8 text-center">
+                    <h4 class="text-lg font-bold color-navy mb-4">Ready to find a partner who understands your needs?</h4>
+                    <a href="https://calendar.app.google/L6sHRt4sCG25jvuL9" target="_blank" class="inline-block bg-cta-gradient text-white font-bold py-3 px-8 rounded-full shadow-lg hover:opacity-80 transition-opacity">
+                        Book My Free Insight Call
+                    </a>
+                </div>
+            </section>
+            
+            <section class="bg-white p-8 md:p-10 rounded-2xl mb-8 shadow-lg text-center">
+                <h3 class="text-2xl font-semibold color-navy mb-4">Liberate Your Time with Smart Technology</h3>
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    Your time is your most valuable asset. We use cutting-edge, easy-to-use financial tools to automate the tedious tasks of bookkeeping and receipt collection. This means no more chasing paperwork or spending late nights on accounts. Instead, you get a real-time, accurate view of your finances, allowing you to focus entirely on serving your customers and growing your business.
+                </p>
+                 <div class="mt-8 text-center">
+                    <a href="https://calendar.app.google/L6sHRt4sCG25jvuL9" target="_blank" class="inline-block bg-cta-gradient text-white font-bold py-3 px-8 rounded-full shadow-lg hover:opacity-80 transition-opacity">
+                        Book My Free Insight Call
+                    </a>
+                </div>
+            </section>
+
+             <!-- Social Proof Section -->
+            <section class="bg-white p-8 md:p-10 rounded-2xl mb-8 shadow-lg">
+                <h3 class="text-2xl font-semibold color-navy mb-4">Social Proof</h3>
+                <div id="testimonial-container-local">
+                    <!-- Testimonial content will be injected here by JavaScript -->
+                </div>
+            </section>
+        </section>
+
+
+        <!-- CTA Booking Section with direct link (Shared Section) -->
+        <section id="contact" class="bg-white p-8 md:p-10 rounded-2xl mb-8 shadow-lg text-center">
+            <h3 class="text-2xl font-semibold color-navy mb-2">Ready to find your hidden profit?</h3>
+            <p class="text-gray-700 mb-6">Book a free, no-obligation insight call directly via our calendar.</p>
+            <a href="https://calendar.app.google/L6sHRt4sCG25jvuL9" target="_blank" class="inline-block bg-cta-gradient text-white font-bold py-3 px-8 rounded-full shadow-lg hover:opacity-80 transition-opacity">
+                Book My Free Insight Call
+            </a>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="bg-navy text-white rounded-t-xl py-6 px-4 text-center mx-auto max-w-7xl">
+        <div class="flex justify-center items-center space-x-6 mb-4">
+            <!-- User Logo (Placeholder) -->
+            <h1 class="text-xl font-bold">Peers LBC</h1>
+            <!-- CIMA MIP Logo (Placeholder) -->
+            <img 
+                src="https://placehold.co/100x32/ff5da2/ffffff?text=CIMA+MIP+Logo" 
+                alt="CIMA Management Accounting Partner Logo" 
+                class="h-6"
+            />
+        </div>
+        <div class="flex justify-center space-x-4 mb-2 text-sm">
+            <span>Corby | Kettering | Market Harborough</span>
+        </div>
+        <div class="flex justify-center space-x-4 mb-2 text-sm">
+            <a href="javascript:void(0)" onclick="showSection('about')" class="hover:underline">About</a>
+            <a href="javascript:void(0)" onclick="showSection('services-page')" class="hover:underline">Services</a>
+            <a href="#contact" class="hover:underline">Contact</a>
+        </div>
+        <div class="text-xs text-gray-400 mt-4">
+            <p>&copy; 2024 Peers LBC. All rights reserved.</p>
+            <p>CIMA Chartered | ICO Registered | Terms</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript to handle section visibility and dynamic testimonials -->
+    <script>
+        const smallBusinessTestimonials = [
+            {
+                quote: "Working with Peers LBC has been a game-changer. I finally understand where our money is going, which has helped us make smarter decisions about our cash flow and investments.",
+                author: "Sarah Jones, Creative Solutions Ltd."
+            },
+            {
+                quote: "Ben's team helped us navigate a complex funding application. Their expert guidance and clean, audit-ready accounts secured the capital we needed to expand.",
+                author: "Tom Williams, Tech Start"
+            },
+            {
+                quote: "We were able to confidently scale our team after implementing a clearer financial reporting system. The periodic insights are a huge asset.",
+                author: "Alex Roberts, New Ventures"
+            }
+        ];
+        
+        const largeBusinessTestimonials = [
+            {
+                quote: "We had 12 branches but no idea which were profitable. Peers LBC set up branch-level reporting and found we were losing £3k monthly in one location we thought was doing well. Now I get periodic updates I can actually understand. We've improved profitability by 15% in 6 months. Highly recommend for any multi-site business. Ben's direct approach and accuracy are exactly what we needed.",
+                author: "John Smith, Another Co."
+            },
+            {
+                quote: "Their process automation has saved us countless hours. The monthly reporting package is delivered on time, is easy to read, and gives our finance directors the clarity they need to make decisions.",
+                author: "Michael Brown, Global Retail"
+            },
+            {
+                quote: "Peers LBC integrated seamlessly with our existing finance team. Their data science expertise uncovered profitability insights we would have never found on our own.",
+                author: "Emma White, Multi-Site Solutions"
+            }
+        ];
+
+        const localTestimonials = [
+            {
+                quote: "Peers LBC has been a lifeline for our local shop. Knowing we have a reliable, local expert to handle our accounts has freed up so much time to focus on our customers and products. Ben's advice is always clear and practical.",
+                author: "Jessica Turner, The Corner Bakery"
+            },
+            {
+                quote: "We needed a local accountant we could trust, and Peers LBC has been the perfect fit. Their team helped us sort out our books and gave us the clarity we needed to manage our expenses and make smart decisions.",
+                author: "Mark Davis, Local Trades Services"
+            }
+        ];
+
+        function showSection(sectionId) {
+            // Hide the welcome section
+            document.getElementById('welcome-section').classList.add('hidden');
+            
+            // Hide all content sections first
+            document.getElementById('small-business-section').classList.add('hidden');
+            document.getElementById('large-business-section').classList.add('hidden');
+            document.getElementById('local-business-section').classList.add('hidden');
+            document.getElementById('services-page').classList.add('hidden');
+            document.getElementById('about').classList.add('hidden');
+
+            // Show the selected section
+            document.getElementById(sectionId).classList.remove('hidden');
+
+            // Scroll to the top of the new content
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+        
+        window.onload = function() {
+            // Function to display a random testimonial
+            function displayRandomTestimonial(containerId, testimonialsArray) {
+                const testimonialContainer = document.getElementById(containerId);
+                if (testimonialContainer && testimonialsArray.length > 0) {
+                    const randomIndex = Math.floor(Math.random() * testimonialsArray.length);
+                    const randomTestimonial = testimonialsArray[randomIndex];
+                    
+                    testimonialContainer.innerHTML = `
+                        <p class="text-gray-700 leading-relaxed italic">
+                            "${randomTestimonial.quote}"
+                        </p>
+                        <p class="text-right text-sm mt-2 font-medium color-navy">- ${randomTestimonial.author}</p>
+                    `;
+                }
+            }
+
+            // Display a random testimonial for all sections on load
+            displayRandomTestimonial('testimonial-container-small', smallBusinessTestimonials);
+            displayRandomTestimonial('testimonial-container-large', largeBusinessTestimonials);
+            displayRandomTestimonial('testimonial-container-local', localTestimonials);
+        };
+    </script>
+</body>
+</html>
