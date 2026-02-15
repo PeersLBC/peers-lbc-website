@@ -335,7 +335,8 @@
                     </div>
 
                     <div class="bg-white p-8 md:p-10 rounded-[2.5rem] shadow-xl shadow-navy/5 border border-slate-100">
-                        <form id="contactForm" action="mailto:benpeers@peerslbc.com" method="post" enctype="text/plain" class="space-y-5">
+                        <!-- Updated Form Structure: No Action/Method attributes to prevent warnings -->
+                        <form id="contactForm" class="space-y-5">
                             <div>
                                 <label class="block text-[10px] uppercase tracking-widest font-bold text-slate-400 mb-2">Full Name</label>
                                 <input type="text" name="name" required class="w-full px-5 py-4 bg-slate-50 border border-slate-100 rounded-2xl input-focus transition-all" placeholder="Enter your name">
@@ -378,19 +379,38 @@
         </div>
     </footer>
 
-    <!-- DYNAMIC DATE SCRIPT -->
+    <!-- SCRIPTS -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
+            // Dynamic Date Logic
             const now = new Date();
             const currentYear = now.getFullYear();
-            
-            // Partnering Year Logic
-            // If we are in Oct/Nov/Dec (Months 9, 10, 11), partner for NEXT year.
             const targetYear = now.getMonth() >= 9 ? currentYear + 1 : currentYear;
-            document.getElementById('dynamic-year').innerText = targetYear;
+            
+            const dynamicYearEl = document.getElementById('dynamic-year');
+            if(dynamicYearEl) dynamicYearEl.innerText = targetYear;
+            
+            const copyrightYearEl = document.getElementById('copyright-year');
+            if(copyrightYearEl) copyrightYearEl.innerText = currentYear;
 
-            // Footer Copyright Year
-            document.getElementById('copyright-year').innerText = currentYear;
+            // CONTACT FORM HANDLER (Replaces previous methods)
+            const contactForm = document.getElementById('contactForm');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault(); // Stop standard form submission
+                    
+                    const name = this.elements['name'].value;
+                    const email = this.elements['email'].value;
+                    const message = this.elements['message'].value;
+                    
+                    // Create formatted body with line breaks
+                    const subject = "New Inquiry from Peers LBC Website";
+                    const body = `Name: ${name}%0D%0AEmail: ${email}%0D%0A%0D%0AMessage:%0D%0A${message}`;
+                    
+                    // Open default mail client
+                    window.location.href = `mailto:benpeers@peerslbc.com?subject=${encodeURIComponent(subject)}&body=${body}`;
+                });
+            }
         });
     </script>
 
