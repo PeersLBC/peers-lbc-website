@@ -335,8 +335,16 @@
                     </div>
 
                     <div class="bg-white p-8 md:p-10 rounded-[2.5rem] shadow-xl shadow-navy/5 border border-slate-100">
-                        <!-- Updated Form Structure: No Action/Method attributes to prevent warnings -->
-                        <form id="contactForm" class="space-y-5">
+                        <!-- FormSubmit.co Integration: Robust, No-Code Email Handling -->
+                        <form action="https://formsubmit.co/benpeers@peerslbc.com" method="POST" class="space-y-5">
+                            <!-- Anti-spam & Configuration -->
+                            <input type="hidden" name="_subject" value="New Inquiry from Peers LBC Website">
+                            <input type="hidden" name="_template" value="table">
+                            <input type="hidden" name="_captcha" value="false">
+                            
+                            <!-- Optional: Redirect back to your site after submission -->
+                            <!-- <input type="hidden" name="_next" value="https://www.peerslbc.co.uk/thanks.html"> -->
+
                             <div>
                                 <label class="block text-[10px] uppercase tracking-widest font-bold text-slate-400 mb-2">Full Name</label>
                                 <input type="text" name="name" required class="w-full px-5 py-4 bg-slate-50 border border-slate-100 rounded-2xl input-focus transition-all" placeholder="Enter your name">
@@ -392,25 +400,6 @@
             
             const copyrightYearEl = document.getElementById('copyright-year');
             if(copyrightYearEl) copyrightYearEl.innerText = currentYear;
-
-            // CONTACT FORM HANDLER (Fixed Encoding)
-            const contactForm = document.getElementById('contactForm');
-            if (contactForm) {
-                contactForm.addEventListener('submit', function(e) {
-                    e.preventDefault(); // Stop standard form submission
-                    
-                    const name = this.querySelector('input[name="name"]').value;
-                    const email = this.querySelector('input[name="email"]').value;
-                    const message = this.querySelector('textarea[name="message"]').value;
-                    
-                    // Format the body for email
-                    const subject = "New Inquiry from Peers LBC Website";
-                    const body = `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`;
-                    
-                    // Properly encode the body to handle new lines and special characters
-                    window.location.href = `mailto:benpeers@peerslbc.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-                });
-            }
         });
     </script>
 
