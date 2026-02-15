@@ -5,30 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- SEO & LOCAL SEARCH OPTIMIZATION -->
-    <title>Peers LBC | Chartered Management Accountants Northamptonshire & Corby</title>
-    <meta name="description" content="Peers LBC: Strategic management accounting for founders in Corby, Kettering, and Market Harborough. Founded in 2025. Proactive tax planning, live bookkeeping, and profit-driven partnership.">
-    <meta name="keywords" content="Chartered Accountant Corby, Management Accounting Kettering, Tax Planning Northamptonshire, Business Growth Accountant UK, Peers LBC, Accountant for Founders">
+    <title>Peers LBC | Chartered Management Accountants Corby & Northamptonshire</title>
+    <meta name="description" content="Peers LBC: Chartered Management Accountants in Corby. Specialist tax planning, bookkeeping, VAT, and business growth for founders in Kettering, Market Harborough, and Northamptonshire.">
+    <meta name="keywords" content="Chartered Accountant Corby, Management Accountant Kettering, Tax Returns Market Harborough, Small Business Accountant Northamptonshire, VAT Returns, Payroll Services Corby, Bookkeeping, CFO Services, Peers LBC">
     <link rel="canonical" href="https://www.peerslbc.co.uk/">
 
-    <!-- SOCIAL MEDIA / OPEN GRAPH -->
-    <meta property="og:title" content="Peers LBC | Strategic Accounting Partners">
-    <meta property="og:description" content="Removing the guesswork from your business finance. Professional management accounting for ambitious founders.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.peerslbc.co.uk/">
-
-    <!-- STRUCTURED DATA (JSON-LD) FOR GOOGLE LOCAL SEARCH -->
+    <!-- STRUCTURED DATA (JSON-LD) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "AccountingService",
       "name": "Peers LBC",
-      "description": "Strategic management accounting and proactive tax planning for scaling businesses and ambitious founders.",
-      "foundingDate": "2025",
-      "logo": "Full logo.svg.svg",
+      "image": "Full logo.svg.svg",
+      "description": "Strategic management accounting and tax planning for founders in Corby and Northamptonshire.",
+      "url": "https://www.peerslbc.co.uk/",
       "address": {
         "@type": "PostalAddress",
-        "addressRegion": "Northamptonshire",
+        "streetAddress": "",
         "addressLocality": "Corby",
+        "addressRegion": "Northamptonshire",
+        "postalCode": "",
         "addressCountry": "GB"
       },
       "geo": {
@@ -36,16 +32,17 @@
         "latitude": "52.4912",
         "longitude": "-0.6958"
       },
-      "url": "https://www.peerslbc.co.uk/",
-      "telephone": "",
+      "areaServed": ["Corby", "Kettering", "Market Harborough", "Wellingborough", "Northamptonshire"],
+      "priceRange": "$$",
       "serviceType": [
+        "Regulatory Bookkeeping",
+        "Corporation Tax",
+        "Self Assessment",
+        "VAT Returns",
+        "Payroll",
         "Management Accounting",
-        "Proactive Tax Planning",
-        "Continuous Bookkeeping",
-        "Business Strategy Consulting",
-        "Financial Forecasting"
-      ],
-      "areaServed": ["Corby", "Kettering", "Market Harborough", "Northamptonshire"]
+        "Business Strategy"
+      ]
     }
     </script>
 
@@ -58,83 +55,75 @@
     <style>
         :root {
             --navy: #000d6b;
-            --purple: #9c19e0;
             --pink: #ff5da2;
-            --soft-bg: #f8fafc;
+            --pink-glow: rgba(255, 93, 162, 0.4);
         }
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #ffffff;
-            color: #0f172a;
-            scroll-behavior: smooth;
-        }
-        .heading-font {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-        }
-        .text-navy { color: var(--navy); }
-        .bg-navy { background-color: var(--navy); }
-        .text-purple { color: var(--purple); }
-        .bg-purple { background-color: var(--purple); }
-        .text-pink { color: var(--pink); }
-        .bg-pink { background-color: var(--pink); }
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        .heading-font { font-family: 'Plus Jakarta Sans', sans-serif; }
         
-        .btn-call {
-            background: linear-gradient(to right, #ff5da2, #ec3e91);
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        .btn-cta {
+            background: linear-gradient(135deg, #ff5da2 0%, #ff2e8c 100%);
+            box-shadow: 0 10px 20px -5px var(--pink-glow);
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
-        .btn-call:hover {
-            opacity: 0.95;
-            transform: translateY(-2px);
-            box-shadow: 0 15px 30px rgba(255, 93, 162, 0.25);
+        .btn-cta:hover {
+            transform: scale(1.03) translateY(-3px);
+            box-shadow: 0 15px 30px -5px var(--pink-glow);
+            filter: brightness(1.1);
         }
-        
-        /* Interactive Comparison Logic */
-        .accordion-content {
-            max-height: 0;
-            overflow: hidden;
-            transition: all 0.3s ease-in-out;
-            opacity: 0;
-        }
-        .accordion-item {
-            border: 1px solid #edf2f7;
+
+        .comparison-card { transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+        .comparison-card:hover { transform: translateY(-8px); }
+
+        .service-card {
             transition: all 0.3s ease;
+            border: 1px solid #f1f5f9;
         }
-        .accordion-item.active {
-            border: 2px solid var(--pink);
-            box-shadow: 0 10px 25px rgba(255, 93, 162, 0.1);
-            transform: scale(1.01);
+        .service-card:hover {
+            border-color: var(--pink);
+            background: #fff;
+            box-shadow: 0 20px 40px -15px rgba(0, 13, 107, 0.05);
         }
-        .accordion-item.active .accordion-content {
-            max-height: 300px;
-            padding-bottom: 1.5rem;
-            opacity: 1;
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            background: #10b981;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 8px;
+            animation: pulse 2s infinite;
         }
-        .accordion-item.active .accordion-icon {
-            transform: rotate(180deg);
-            color: var(--pink);
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(16, 185, 129, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
         }
-        .accordion-item.active .accordion-title {
-            color: var(--pink);
+
+        .input-focus:focus {
+            border-color: var(--pink);
+            ring-color: var(--pink-glow);
+            outline: none;
         }
     </style>
 </head>
-<body class="antialiased selection:bg-pink-100">
+<body class="bg-white text-slate-900 antialiased">
 
-    <!-- HEADER / NAVIGATION -->
-    <header class="w-full py-6 px-6 sticky top-0 bg-white/90 backdrop-blur-md z-50 border-b border-gray-50">
-        <nav class="max-w-6xl mx-auto flex justify-between items-center" role="navigation">
-            <div class="flex items-center gap-4">
-                <a href="/" aria-label="Peers LBC Home">
-                    <img src="Full logo.svg.svg" alt="Peers LBC - Professional Management Accountants" class="h-12 md:h-14 w-auto">
-                </a>
-            </div>
+    <!-- NAVIGATION -->
+    <header class="w-full py-5 px-6 sticky top-0 bg-white/90 backdrop-blur-md z-50 border-b border-slate-50">
+        <nav class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="#" class="flex items-center">
+                <img src="Full logo.svg.svg" alt="Peers LBC Logo" class="h-10 md:h-12 w-auto">
+            </a>
             
+            <div class="hidden lg:flex items-center gap-8 text-xs font-bold uppercase tracking-widest text-slate-400">
+                <a href="#services" class="hover:text-navy transition-colors">Services</a>
+                <a href="#compare" class="hover:text-navy transition-colors">Comparison</a>
+                <a href="#contact" class="hover:text-navy transition-colors">Contact</a>
+            </div>
+
             <div class="flex items-center gap-6">
-                <div class="hidden md:flex flex-col items-end mr-4">
-                    <span class="text-[9px] uppercase tracking-widest font-bold text-slate-400">Chartered Partnership</span>
-                    <img src="PCH Logo colour JPG.png" alt="CIMA Member in Practice Northamptonshire" class="h-10 w-auto">
-                </div>
-                <a href="https://calendar.app.google/L6sHRt4sCG25jvuL9" target="_blank" class="btn-call text-white px-6 py-3 rounded-full font-bold text-xs uppercase tracking-widest shadow-lg active:scale-95 transition-transform">
+                <a href="https://calendar.app.google/L6sHRt4sCG25jvuL9" target="_blank" class="btn-cta text-white px-8 py-3 rounded-full font-bold text-xs uppercase tracking-widest">
                     Book Call
                 </a>
             </div>
@@ -142,215 +131,267 @@
     </header>
 
     <main>
-        <!-- HERO / LANDING -->
-        <section class="min-h-[80vh] flex flex-col justify-center items-center text-center px-6 py-12 md:py-24 bg-gradient-to-b from-white to-slate-50">
-            <div class="max-w-4xl mx-auto">
-                <h1 class="heading-font text-4xl md:text-6xl lg:text-7xl font-extrabold leading-tight tracking-tight mb-8 text-navy">
+        <!-- HERO -->
+        <section class="relative pt-20 pb-24 px-6 bg-gradient-to-b from-white to-slate-50 overflow-hidden">
+            <div class="max-w-4xl mx-auto text-center relative z-10">
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-50 text-emerald-700 text-[11px] font-bold uppercase tracking-widest mb-8">
+                    <span class="status-dot"></span> Partnering for <span id="dynamic-year">2026</span> Growth
+                </div>
+                <h1 class="heading-font text-4xl md:text-6xl lg:text-7xl font-extrabold leading-[1.1] text-[#000d6b] mb-8">
                     Finance is the lifeline of your business, it shouldn't be a mystery.
                 </h1>
-                
-                <p class="text-xl md:text-2xl text-slate-500 font-light leading-relaxed mb-12 max-w-3xl mx-auto">
+                <p class="text-lg md:text-xl text-slate-500 font-light leading-relaxed mb-12 max-w-3xl mx-auto">
                     Your business is more than a venture; it’s your passion and your purpose. You deserve a partner who shares that drive—someone who doesn't just manage your numbers, but uses them to fuel your vision and remove the guesswork, allowing you to propel your life's work forward.
                 </p>
-
-                <div class="flex flex-col sm:flex-row justify-center items-center gap-6">
-                    <a href="https://calendar.app.google/L6sHRt4sCG25jvuL9" target="_blank" class="btn-call text-white px-10 py-5 rounded-full font-bold text-sm uppercase tracking-widest shadow-xl hover:opacity-90">
-                        Stop Guessing, Start Scaling
+                
+                <div class="flex flex-col items-center gap-6">
+                    <a href="https://calendar.app.google/L6sHRt4sCG25jvuL9" target="_blank" class="btn-cta text-white px-12 py-6 rounded-full font-bold text-sm uppercase tracking-[0.15em] w-full max-w-sm">
+                        Book Your Strategy Session
                     </a>
-                    <a href="#compare" class="text-navy font-bold text-sm uppercase tracking-widest border-b-2 border-navy/10 hover:border-navy transition-all pb-1">
-                        See How We're Different
-                    </a>
+                    <div class="flex items-center gap-2 bg-pink/5 border border-pink/10 px-6 py-2 rounded-full">
+                        <svg class="w-4 h-4 text-pink" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                        <span class="text-[11px] text-pink font-extrabold uppercase tracking-widest">Free 30-min consultation • No obligation</span>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- THE PAIN VS. PARTNERSHIP (COMPARISON SECTION) -->
-        <section id="compare" class="bg-white px-6 py-20 md:py-32 overflow-hidden border-y border-slate-100">
+        <!-- COMPARISON SECTION -->
+        <section id="compare" class="py-24 bg-slate-50 px-6">
             <div class="max-w-6xl mx-auto">
                 <div class="text-center mb-16">
-                    <span class="text-pink font-bold uppercase text-[10px] tracking-[0.3em] mb-4 block">The Peers LBC Comparison</span>
-                    <h2 class="heading-font text-3xl md:text-5xl font-extrabold text-navy mb-4">Business has enough surprises</h2>
-                    <p class="text-slate-500 text-lg max-w-2xl mx-auto">Taxes and cashflow shouldn't keep you awake at night. Here is how we redefine the relationship.</p>
+                    <h2 class="heading-font text-3xl md:text-5xl font-extrabold text-[#000d6b] mb-4">Business has enough surprises</h2>
+                    <p class="text-slate-500 text-lg">Taxes and cashflow shouldn't keep you awake at night.</p>
                 </div>
 
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-0 items-stretch bg-white rounded-[3rem] shadow-2xl shadow-slate-200/50 overflow-hidden border border-slate-100">
-                    
-                    <!-- THE FRICTION -->
-                    <div class="p-8 md:p-12 lg:p-16 bg-slate-50/70 border-b lg:border-b-0 lg:border-r border-slate-100">
-                        <div class="flex items-center gap-3 mb-12">
-                            <div class="w-8 h-8 rounded-full bg-slate-200 flex items-center justify-center text-slate-500 font-bold">✕</div>
-                            <h3 class="heading-font text-lg font-bold text-slate-400 uppercase tracking-widest">Traditional Accountants</h3>
-                        </div>
-                        
-                        <div class="space-y-12">
-                            <article class="relative pl-8">
-                                <div class="w-1 h-full absolute left-0 bg-slate-200 rounded-full"></div>
-                                <h4 class="font-bold text-navy mb-2 uppercase text-[11px] tracking-widest">Surprise Tax Bills</h4>
-                                <p class="text-sm text-slate-500 leading-relaxed italic">"I didn't know I owed that much until 9 months after year-end."</p>
-                            </article>
-                            <article class="relative pl-8">
-                                <div class="w-1 h-full absolute left-0 bg-slate-200 rounded-full"></div>
-                                <h4 class="font-bold text-navy mb-2 uppercase text-[11px] tracking-widest">Deadline Panic</h4>
-                                <p class="text-sm text-slate-500 leading-relaxed">Reactive communication. Rushing to find receipts 24 hours before a filing deadline.</p>
-                            </article>
-                            <article class="relative pl-8">
-                                <div class="w-1 h-full absolute left-0 bg-slate-200 rounded-full"></div>
-                                <h4 class="font-bold text-navy mb-2 uppercase text-[11px] tracking-widest">Decision Blindness</h4>
-                                <p class="text-sm text-slate-500 leading-relaxed">Deciding your 2026 strategy using data from early 2025. The numbers are already obsolete.</p>
-                            </article>
-                        </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+                    <!-- Legacy Card -->
+                    <div class="comparison-card bg-white p-8 md:p-12 rounded-[2rem] border border-slate-200">
+                        <span class="text-slate-400 font-bold uppercase text-[10px] tracking-widest mb-6 block">The Legacy Way</span>
+                        <h3 class="heading-font text-2xl font-bold text-slate-800 mb-6">Traditional Accountants</h3>
+                        <ul class="space-y-6">
+                            <li class="flex gap-4 items-start text-slate-500">
+                                <span class="text-red-400 mt-1">✕</span>
+                                <p><strong>Surprise Bills:</strong> Tax liabilities calculated 9 months too late.</p>
+                            </li>
+                            <li class="flex gap-4 items-start text-slate-500">
+                                <span class="text-red-400 mt-1">✕</span>
+                                <p><strong>Reactive:</strong> You only hear from them when a deadline is due.</p>
+                            </li>
+                            <li class="flex gap-4 items-start text-slate-500">
+                                <span class="text-red-400 mt-1">✕</span>
+                                <p><strong>Obsolete Data:</strong> Making 2026 decisions based on 2024 numbers.</p>
+                            </li>
+                        </ul>
                     </div>
 
-                    <!-- THE FLOW -->
-                    <div class="p-8 md:p-12 lg:p-16 bg-white">
-                        <div class="flex items-center gap-3 mb-12">
-                            <div class="w-8 h-8 rounded-full bg-pink flex items-center justify-center text-white">
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
-                            </div>
-                            <h3 class="heading-font text-lg font-bold text-pink uppercase tracking-widest">The Peers LBC Partner</h3>
-                        </div>
-
-                        <div class="space-y-4">
-                            <!-- Accordion 1 -->
-                            <div class="accordion-item bg-white rounded-2xl active">
-                                <button class="w-full p-5 text-left flex justify-between items-center group" onclick="toggleAccordion(this)" aria-expanded="true">
-                                    <div class="flex items-center gap-4">
-                                        <svg class="w-6 h-6 text-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
-                                        <span class="accordion-title heading-font font-bold text-navy text-lg">Rolling Tax Forecasting</span>
-                                    </div>
-                                    <svg class="accordion-icon w-5 h-5 text-slate-300 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                                </button>
-                                <div class="accordion-content px-14">
-                                    <p class="text-sm text-slate-600 leading-relaxed">No shocks. We calculate your tax liabilities as you earn. You'll know exactly what you owe months in advance, allowing for perfect cash reserve management.</p>
-                                </div>
-                            </div>
-                            <!-- Accordion 2 -->
-                            <div class="accordion-item bg-white rounded-2xl">
-                                <button class="w-full p-5 text-left flex justify-between items-center group" onclick="toggleAccordion(this)" aria-expanded="false">
-                                    <div class="flex items-center gap-4">
-                                        <svg class="w-6 h-6 text-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                                        <span class="accordion-title heading-font font-bold text-navy text-lg">Early Filing Guarantee</span>
-                                    </div>
-                                    <svg class="accordion-icon w-5 h-5 text-slate-300 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                                </button>
-                                <div class="accordion-content px-14">
-                                    <p class="text-sm text-slate-600 leading-relaxed">We aim to file returns months before the deadline. We manage the compliance cycle proactively so you can focus on leading your community.</p>
-                                </div>
-                            </div>
-                            <!-- Accordion 3 -->
-                            <div class="accordion-item bg-white rounded-2xl">
-                                <button class="w-full p-5 text-left flex justify-between items-center group" onclick="toggleAccordion(this)" aria-expanded="false">
-                                    <div class="flex items-center gap-4">
-                                        <svg class="w-6 h-6 text-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
-                                        <span class="accordion-title heading-font font-bold text-navy text-lg">Live Profitability Insights</span>
-                                    </div>
-                                    <svg class="accordion-icon w-5 h-5 text-slate-300 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                                </button>
-                                <div class="accordion-content px-14">
-                                    <p class="text-sm text-slate-600 leading-relaxed">Your books are synced weekly, not annually. See your actual margins today and make growth decisions based on real-time operational data.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="mt-12">
-                            <a href="https://calendar.app.google/L6sHRt4sCG25jvuL9" target="_blank" class="block text-center py-5 px-8 bg-navy text-white rounded-2xl font-bold hover:shadow-xl transition-all shadow-navy/10 active:scale-[0.98]">Make Your Finance Work For You</a>
-                        </div>
+                    <!-- Peers LBC Card -->
+                    <div class="comparison-card bg-[#000d6b] p-8 md:p-12 rounded-[2rem] text-white shadow-2xl">
+                        <span class="text-pink font-bold uppercase text-[10px] tracking-widest mb-6 block">The Peers LBC Advantage</span>
+                        <h3 class="heading-font text-2xl font-bold mb-6">Your Strategic Partner</h3>
+                        <ul class="space-y-6">
+                            <li class="flex gap-4 items-start">
+                                <span class="text-emerald-400 mt-1">✓</span>
+                                <p><strong>Rolling Forecasts:</strong> Know your tax bill in real-time as you earn it.</p>
+                            </li>
+                            <li class="flex gap-4 items-start">
+                                <span class="text-emerald-400 mt-1">✓</span>
+                                <p><strong>Weekly Sync:</strong> Your books are never more than 7 days out of date.</p>
+                            </li>
+                            <li class="flex gap-4 items-start">
+                                <span class="text-emerald-400 mt-1">✓</span>
+                                <p><strong>Growth Focused:</strong> Monthly meetings to review margins and cashflow.</p>
+                            </li>
+                        </ul>
                     </div>
+                </div>
+
+                <div class="text-center">
+                    <a href="https://calendar.app.google/L6sHRt4sCG25jvuL9" target="_blank" class="btn-cta text-white px-10 py-5 rounded-full font-bold text-sm uppercase tracking-widest inline-flex items-center gap-2">
+                        Switch to Peers LBC
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                    </a>
                 </div>
             </div>
         </section>
 
-        <!-- TRUST / REVIEWS -->
-        <section class="py-20 md:py-32 px-6 bg-slate-50/30">
-            <div class="max-w-6xl mx-auto">
-                <div class="flex flex-col md:flex-row justify-between items-center md:items-end mb-16 gap-6">
-                    <div class="text-center md:text-left">
-                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 text-emerald-600 text-[10px] font-bold uppercase tracking-widest mb-4">
-                            Verified 5.0 Rating
-                        </div>
-                        <h2 class="heading-font text-3xl md:text-5xl font-extrabold text-navy">What our clients say</h2>
+        <!-- SERVICES GRID -->
+        <section id="services" class="py-24 px-6 bg-white">
+            <div class="max-w-7xl mx-auto">
+                <div class="mb-20 text-center md:text-left">
+                    <h2 class="heading-font text-3xl md:text-5xl font-extrabold text-[#000d6b] mb-4">Complete Financial Stewardship</h2>
+                    <p class="text-slate-500 text-lg max-w-2xl">Expert accounting services for Corby, Kettering & Market Harborough businesses.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+                    <div class="service-card p-8 rounded-3xl bg-slate-50/50">
+                        <h3 class="heading-font font-bold text-lg text-navy mb-4">Compliance</h3>
+                        <ul class="text-xs space-y-3 text-slate-500 leading-relaxed font-medium uppercase tracking-wider">
+                            <li>• Regulatory Bookkeeping</li>
+                            <li>• Statutory Submissions</li>
+                            <li>• Confirmation Statements</li>
+                            <li>• Identity Verification</li>
+                            <li>• Signing Documents</li>
+                            <li>• Finance Ready Accounts</li>
+                        </ul>
                     </div>
-                    
-                    <div class="bg-white border border-slate-100 p-6 rounded-3xl shadow-sm flex items-center gap-5">
-                        <div class="bg-[#4285F4] p-3 rounded-2xl text-white shadow-md">
-                            <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24" aria-label="Google"><path d="M12.48 10.92v3.28h7.84c-.24 1.84-2.12 5.4-7.84 5.4-4.96 0-9-4.12-9-9.16s4.04-9.16 9-9.16c2.84 0 4.76 1.16 5.84 2.12l2.6-2.52C19.12 1.36 16.08 0 12.48 0 5.6 0 0 5.6 0 12.48s5.6 12.48 12.48 12.48c7.2 0 12-5.08 12-12.24 0-.84-.08-1.48-.2-2.12h-11.8z"/></svg>
-                        </div>
-                        <div>
-                            <div class="flex gap-1 text-orange-400 mb-1">
-                                <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                                <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                                <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                                <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                                <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                            </div>
-                            <p class="text-xs font-bold text-navy uppercase tracking-widest">Google Business Review</p>
-                        </div>
+                    <div class="service-card p-8 rounded-3xl bg-slate-50/50">
+                        <h3 class="heading-font font-bold text-lg text-navy mb-4">Tax & Reporting</h3>
+                        <ul class="text-xs space-y-3 text-slate-500 leading-relaxed font-medium uppercase tracking-wider">
+                            <li>• Corporation Tax</li>
+                            <li>• VAT Returns</li>
+                            <li>• Year End Accounting</li>
+                            <li>• Payroll Management</li>
+                            <li>• Expenses Management</li>
+                            <li>• Tax Planning</li>
+                        </ul>
+                    </div>
+                    <div class="service-card p-8 rounded-3xl bg-slate-50/50">
+                        <h3 class="heading-font font-bold text-lg text-navy mb-4">Insights</h3>
+                        <ul class="text-xs space-y-3 text-slate-500 leading-relaxed font-medium uppercase tracking-wider">
+                            <li>• Monthly Business Review</li>
+                            <li>• P&L Variance Analysis</li>
+                            <li>• Cash Flow Monitoring</li>
+                            <li>• Creditor & Debtor Overview</li>
+                            <li>• KPIs & Monitoring</li>
+                            <li>• Balance Sheets</li>
+                        </ul>
+                    </div>
+                    <div class="service-card p-8 rounded-3xl bg-slate-50/50">
+                        <h3 class="heading-font font-bold text-lg text-navy mb-4">Advisory</h3>
+                        <ul class="text-xs space-y-3 text-slate-500 leading-relaxed font-medium uppercase tracking-wider">
+                            <li>• Scenario Planning</li>
+                            <li>• ERP Implementation</li>
+                            <li>• Data Integrations</li>
+                            <li>• Team Development</li>
+                            <li>• Goal Planning</li>
+                            <li>• PO Management</li>
+                        </ul>
                     </div>
                 </div>
 
+                <div class="text-center">
+                    <a href="https://calendar.app.google/L6sHRt4sCG25jvuL9" target="_blank" class="btn-cta text-white px-10 py-5 rounded-full font-bold text-sm uppercase tracking-widest inline-flex items-center gap-2">
+                        Secure Your Free Strategy Session
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- REVIEWS SECTION -->
+        <section class="py-24 px-6 bg-slate-50 border-t border-slate-100">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-16">
+                     <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 text-emerald-600 text-[10px] font-bold uppercase tracking-widest mb-4">
+                        Verified 5.0 Rating
+                    </div>
+                    <h2 class="heading-font text-3xl md:text-5xl font-extrabold text-[#000d6b] mb-6">What our clients say</h2>
+                </div>
+                
                 <!-- LIVE FEED CONTAINER -->
-                <div id="google-feed-container" class="min-h-[150px]">
+                <div id="google-feed-container" class="min-h-[200px]">
                     <script defer async src='https://cdn.trustindex.io/loader.js?bf6362164af487909a26507c08d'></script>
                 </div>
                 
-                <div class="mt-16 text-center">
-                    <a href="https://share.google/yByPufI6qUIt2oIHU" target="_blank" class="inline-flex items-center gap-3 text-sm font-extrabold text-slate-400 hover:text-[#4285F4] transition-colors group">
-                        <span class="border-b-2 border-slate-100 group-hover:border-[#4285F4] pb-1 uppercase tracking-[0.2em]">Read all reviews on Google</span>
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                <div class="mt-12 text-center">
+                    <a href="https://share.google/yByPufI6qUIt2oIHU" target="_blank" class="inline-flex items-center gap-2 text-xs font-extrabold text-slate-400 hover:text-[#000d6b] transition-colors group uppercase tracking-widest">
+                        <span>Read all reviews on Google</span>
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                     </a>
+                </div>
+
+                <div class="mt-12 text-center">
+                    <a href="https://calendar.app.google/L6sHRt4sCG25jvuL9" target="_blank" class="btn-cta text-white px-10 py-5 rounded-full font-bold text-sm uppercase tracking-widest inline-flex items-center gap-2">
+                        Start Your Success Story
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT US SECTION -->
+        <section id="contact" class="py-24 px-6 bg-white">
+            <div class="max-w-5xl mx-auto">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                    <div>
+                        <h2 class="heading-font text-3xl md:text-5xl font-extrabold text-[#000d6b] mb-6">Get in touch</h2>
+                        <p class="text-slate-500 text-lg mb-10">If you have any questions or need any more information please feel free to email below and we will get back to you shortly.</p>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-center gap-4">
+                                <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-sm text-pink border border-slate-100">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                                </div>
+                                <span class="font-bold text-navy">benpeers@peerslbc.com</span>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-sm text-pink border border-slate-100">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                                </div>
+                                <span class="font-bold text-navy">Corby, Northamptonshire</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-8 md:p-10 rounded-[2.5rem] shadow-xl shadow-navy/5 border border-slate-100">
+                        <form id="contactForm" action="mailto:benpeers@peerslbc.com" method="post" enctype="text/plain" class="space-y-5">
+                            <div>
+                                <label class="block text-[10px] uppercase tracking-widest font-bold text-slate-400 mb-2">Full Name</label>
+                                <input type="text" name="name" required class="w-full px-5 py-4 bg-slate-50 border border-slate-100 rounded-2xl input-focus transition-all" placeholder="Enter your name">
+                            </div>
+                            <div>
+                                <label class="block text-[10px] uppercase tracking-widest font-bold text-slate-400 mb-2">Email Address</label>
+                                <input type="email" name="email" required class="w-full px-5 py-4 bg-slate-50 border border-slate-100 rounded-2xl input-focus transition-all" placeholder="name@company.com">
+                            </div>
+                            <div>
+                                <label class="block text-[10px] uppercase tracking-widest font-bold text-slate-400 mb-2">How can we help?</label>
+                                <textarea name="message" rows="4" required class="w-full px-5 py-4 bg-slate-50 border border-slate-100 rounded-2xl input-focus transition-all resize-none" placeholder="Briefly describe your business needs..."></textarea>
+                            </div>
+                            <button type="submit" class="w-full btn-cta text-white py-5 rounded-2xl font-bold uppercase tracking-widest text-sm">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
     <!-- FOOTER -->
-    <footer class="py-16 px-6 border-t border-slate-100 bg-white" role="contentinfo">
-        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-12">
-            <div class="flex flex-col gap-6">
-                <!-- Peers LBC Logo in Footer -->
-                <img src="Full logo.svg.svg" alt="Peers LBC Logo" class="h-10 md:h-12 w-auto opacity-90">
-                <div>
-                    <p class="text-[10px] text-slate-400 font-bold uppercase tracking-widest">Chartered Management Accounting Partner</p>
-                    <p class="text-xs text-slate-300 mt-1 uppercase tracking-tighter">Corby | Kettering | Market Harborough | Northamptonshire</p>
-                </div>
+    <footer class="bg-white border-t border-slate-100 py-16 px-6">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-12">
+            <div>
+                <img src="Full logo.svg.svg" alt="Peers LBC" class="h-8 mb-6">
+                <p class="text-[10px] uppercase tracking-widest font-black text-slate-300">Chartered Management Accounting Partner</p>
+                <p class="text-xs text-slate-400 mt-4 leading-relaxed">Serving Corby, Kettering, Market Harborough &<br>Northamptonshire founders.</p>
             </div>
             
-            <div class="flex flex-col items-start md:items-end gap-6">
-                <a href="https://calendar.app.google/L6sHRt4sCG25jvuL9" class="text-navy hover:text-pink transition-colors font-extrabold text-sm uppercase tracking-widest border-b-2 border-navy/5 pb-1">
-                    Book My Strategy Session
-                </a>
-                <div class="flex items-center gap-4 text-[10px] text-slate-300 font-bold uppercase tracking-widest">
-                    <span>&copy; 2025–2026 Peers LBC</span>
-                    <span class="opacity-30">|</span>
-                    <a href="#" class="hover:text-navy">Privacy</a>
-                    <span class="opacity-30">|</span>
-                    <a href="#" class="hover:text-navy">Terms</a>
+            <div class="flex flex-col md:items-end gap-6 text-[10px] uppercase font-bold tracking-[0.2em] text-slate-400">
+                <div class="flex gap-8">
+                    <a href="#" class="hover:text-pink transition-colors">Privacy</a>
+                    <a href="#" class="hover:text-pink transition-colors">Terms</a>
+                    <a href="#contact" class="hover:text-pink transition-colors">Contact</a>
                 </div>
+                <p>&copy; <span id="copyright-year">2025</span> Peers LBC. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
 
+    <!-- DYNAMIC DATE SCRIPT -->
     <script>
-        /**
-         * Accordion Logic
-         * Ensures a smooth, interactive experience that separates Peers LBC from legacy firms.
-         */
-        function toggleAccordion(button) {
-            const item = button.parentElement;
-            const isActive = item.classList.contains('active');
+        document.addEventListener('DOMContentLoaded', () => {
+            const now = new Date();
+            const currentYear = now.getFullYear();
             
-            // Close all items to keep focus clean
-            document.querySelectorAll('.accordion-item').forEach(el => {
-                el.classList.remove('active');
-                el.querySelector('button').setAttribute('aria-expanded', 'false');
-            });
-            
-            // Toggle the selected item
-            if (!isActive) {
-                item.classList.add('active');
-                button.setAttribute('aria-expanded', 'true');
-            }
-        }
+            // Partnering Year Logic
+            // If we are in Oct/Nov/Dec (Months 9, 10, 11), partner for NEXT year.
+            const targetYear = now.getMonth() >= 9 ? currentYear + 1 : currentYear;
+            document.getElementById('dynamic-year').innerText = targetYear;
+
+            // Footer Copyright Year
+            document.getElementById('copyright-year').innerText = currentYear;
+        });
     </script>
 
 </body>
