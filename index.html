@@ -138,10 +138,11 @@
     <!-- End Google Tag Manager (noscript) -->
 
     <!-- NAVIGATION -->
-    <header class="w-full py-4 px-4 md:px-6 sticky top-0 bg-white/95 backdrop-blur-md z-50 border-b border-slate-50 shadow-sm">
+    <header class="w-full py-2 md:py-3 px-4 md:px-6 sticky top-0 bg-white/95 backdrop-blur-md z-50 border-b border-slate-50 shadow-sm">
         <nav class="max-w-7xl mx-auto flex justify-between items-center">
             <a href="#" class="flex items-center">
-                <img src="Full logo.svg.svg" alt="Peers LBC Logo" class="h-14 sm:h-16 md:h-20 lg:h-24 w-auto transition-transform hover:scale-105">
+                <!-- Enlarged width and negative margins to bypass transparent SVG boundaries -->
+                <img src="Full logo.svg.svg" alt="Peers LBC Logo" class="w-[180px] sm:w-[220px] md:w-[280px] lg:w-[320px] h-auto -my-6 md:-my-10 lg:-my-12 transition-transform hover:scale-105">
             </a>
             
             <div class="hidden lg:flex items-center gap-8 text-xs font-bold uppercase tracking-widest text-slate-400">
@@ -173,7 +174,7 @@
         <section class="relative pt-20 pb-24 px-6 bg-gradient-to-b from-white to-slate-50 overflow-hidden">
             <div class="max-w-4xl mx-auto text-center relative z-10">
                 <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-50 text-emerald-700 text-[11px] font-bold uppercase tracking-widest mb-8">
-                    <span class="status-dot"></span> Corby, Kettering & Wellingborough's Trusted Advisors
+                    <span class="status-dot"></span> Northamptonshire's Trusted Advisors
                 </div>
                 <h1 class="heading-font text-4xl md:text-5xl lg:text-6xl font-extrabold leading-[1.1] text-[#175440] mb-8">
                     Stop letting the admin control you. Take back your business.
@@ -443,8 +444,9 @@
     <footer class="bg-white border-t border-slate-100 py-16 px-6">
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-12">
             <div>
-                <img src="Full logo.svg.svg" alt="Peers LBC" class="h-16 md:h-20 mb-6 w-auto">
-                <p class="text-[10px] uppercase tracking-widest font-black text-slate-300">Chartered Management Accounting Partner</p>
+                <!-- Enlarged width and negative margins for footer as well -->
+                <img src="Full logo.svg.svg" alt="Peers LBC" class="w-[200px] md:w-[280px] lg:w-[320px] h-auto -my-6 md:-my-10 lg:-my-12 mb-6 transition-transform hover:scale-105">
+                <p class="text-[10px] uppercase tracking-widest font-black text-slate-300 mt-8">Chartered Management Accounting Partner</p>
                 <p class="text-xs text-slate-400 mt-4 leading-relaxed">Serving Corby, Kettering, Wellingborough &<br>Northamptonshire business owners.</p>
             </div>
             
