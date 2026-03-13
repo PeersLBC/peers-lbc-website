@@ -79,21 +79,21 @@
     
     <style>
         :root {
-            --navy: #000d6b;
-            --pink: #ff5da2;
-            --pink-glow: rgba(255, 93, 162, 0.4);
+            --brand-green: #175440;
+            --brand-gold: #cf983e;
+            --gold-glow: rgba(207, 152, 62, 0.4);
         }
         body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
         .heading-font { font-family: 'Plus Jakarta Sans', sans-serif; }
         
         .btn-cta {
-            background: linear-gradient(135deg, #ff5da2 0%, #ff2e8c 100%);
-            box-shadow: 0 10px 20px -5px var(--pink-glow);
+            background: linear-gradient(135deg, var(--brand-gold) 0%, #b58231 100%);
+            box-shadow: 0 10px 20px -5px var(--gold-glow);
             transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
         .btn-cta:hover {
             transform: scale(1.03) translateY(-3px);
-            box-shadow: 0 15px 30px -5px var(--pink-glow);
+            box-shadow: 0 15px 30px -5px var(--gold-glow);
             filter: brightness(1.1);
         }
 
@@ -105,9 +105,9 @@
             border: 1px solid #f1f5f9;
         }
         .service-card:hover {
-            border-color: var(--pink);
+            border-color: var(--brand-gold);
             background: #fff;
-            box-shadow: 0 20px 40px -15px rgba(0, 13, 107, 0.05);
+            box-shadow: 0 20px 40px -15px rgba(23, 84, 64, 0.1);
         }
 
         .status-dot {
@@ -126,8 +126,8 @@
         }
 
         .input-focus:focus {
-            border-color: var(--pink);
-            ring-color: var(--pink-glow);
+            border-color: var(--brand-gold);
+            ring-color: var(--gold-glow);
             outline: none;
         }
     </style>
@@ -146,16 +146,16 @@
             </a>
             
             <div class="hidden lg:flex items-center gap-8 text-xs font-bold uppercase tracking-widest text-slate-400">
-                <a href="#services" class="hover:text-[#000d6b] transition-colors">Services</a>
-                <a href="#compare" class="hover:text-[#000d6b] transition-colors">Comparison</a>
-                <a href="#advisor" class="hover:text-[#000d6b] transition-colors">Why Us</a>
-                <a href="#contact" class="hover:text-[#000d6b] transition-colors">Contact</a>
+                <a href="#services" class="hover:text-[#175440] transition-colors">Services</a>
+                <a href="#compare" class="hover:text-[#175440] transition-colors">Comparison</a>
+                <a href="#advisor" class="hover:text-[#175440] transition-colors">Why Us</a>
+                <a href="#contact" class="hover:text-[#175440] transition-colors">Contact</a>
             </div>
 
             <!-- Header Action Buttons -->
             <div class="flex items-center gap-2 md:gap-4">
                 <!-- Direct Call Button -->
-                <a href="tel:01536689025" class="flex items-center gap-2 px-3 md:px-5 py-2 md:py-3 rounded-full border-2 border-slate-100 text-[#000d6b] font-bold text-[10px] md:text-xs uppercase tracking-widest hover:border-[#ff5da2] hover:text-[#ff5da2] transition-all bg-white whitespace-nowrap">
+                <a href="tel:01536689025" class="flex items-center gap-2 px-3 md:px-5 py-2 md:py-3 rounded-full border-2 border-slate-100 text-[#175440] font-bold text-[10px] md:text-xs uppercase tracking-widest hover:border-[#cf983e] hover:text-[#cf983e] transition-all bg-white whitespace-nowrap">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                     </svg>
@@ -176,7 +176,7 @@
                 <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-50 text-emerald-700 text-[11px] font-bold uppercase tracking-widest mb-8">
                     <span class="status-dot"></span> Partnering for <span id="dynamic-year">2026</span> Growth
                 </div>
-                <h1 class="heading-font text-4xl md:text-6xl lg:text-7xl font-extrabold leading-[1.1] text-[#000d6b] mb-8">
+                <h1 class="heading-font text-4xl md:text-6xl lg:text-7xl font-extrabold leading-[1.1] text-[#175440] mb-8">
                     Finance is the lifeline of your business. It shouldn't be a mystery.
                 </h1>
                 <p class="text-lg md:text-xl text-slate-500 font-light leading-relaxed mb-12 max-w-3xl mx-auto">
@@ -187,9 +187,9 @@
                     <a href="https://calendar.app.google/L6sHRt4sCG25jvuL9" target="_blank" class="btn-cta text-white px-12 py-6 rounded-full font-bold text-sm uppercase tracking-[0.15em] w-full max-w-sm">
                         Book Your Strategy Session
                     </a>
-                    <div class="flex items-center gap-2 bg-[#ff5da2]/5 border border-[#ff5da2]/10 px-6 py-2 rounded-full">
-                        <svg class="w-4 h-4 text-[#ff5da2]" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                        <span class="text-[11px] text-[#ff5da2] font-extrabold uppercase tracking-widest">Free 30-min consultation • No obligation</span>
+                    <div class="flex items-center gap-2 bg-[#cf983e]/5 border border-[#cf983e]/10 px-6 py-2 rounded-full">
+                        <svg class="w-4 h-4 text-[#cf983e]" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                        <span class="text-[11px] text-[#cf983e] font-extrabold uppercase tracking-widest">Free 30-min consultation • No obligation</span>
                     </div>
                 </div>
             </div>
@@ -199,7 +199,7 @@
         <section id="compare" class="py-24 bg-slate-50 px-6">
             <div class="max-w-6xl mx-auto">
                 <div class="text-center mb-16">
-                    <h2 class="heading-font text-3xl md:text-5xl font-extrabold text-[#000d6b] mb-4">Business has enough surprises</h2>
+                    <h2 class="heading-font text-3xl md:text-5xl font-extrabold text-[#175440] mb-4">Business has enough surprises</h2>
                     <p class="text-slate-500 text-lg">Taxes and cashflow shouldn't keep you awake at night. You deserve a proactive partner.</p>
                 </div>
 
@@ -225,8 +225,8 @@
                     </div>
 
                     <!-- Peers LBC Card -->
-                    <div class="comparison-card bg-[#000d6b] p-8 md:p-12 rounded-[2rem] text-white shadow-2xl">
-                        <span class="text-[#ff5da2] font-bold uppercase text-[10px] tracking-widest mb-6 block">The Peers LBC Advantage</span>
+                    <div class="comparison-card bg-[#175440] p-8 md:p-12 rounded-[2rem] text-white shadow-2xl">
+                        <span class="text-[#cf983e] font-bold uppercase text-[10px] tracking-widest mb-6 block">The Peers LBC Advantage</span>
                         <h3 class="heading-font text-2xl font-bold mb-6">Your Strategic Partner</h3>
                         <ul class="space-y-6">
                             <li class="flex gap-4 items-start">
@@ -258,13 +258,13 @@
         <section id="services" class="py-24 px-6 bg-white">
             <div class="max-w-7xl mx-auto">
                 <div class="mb-20 text-center md:text-left">
-                    <h2 class="heading-font text-3xl md:text-5xl font-extrabold text-[#000d6b] mb-4">Complete Financial Stewardship</h2>
+                    <h2 class="heading-font text-3xl md:text-5xl font-extrabold text-[#175440] mb-4">Complete Financial Stewardship</h2>
                     <p class="text-slate-500 text-lg max-w-2xl">Expert accounting and growth services tailored for Northamptonshire, Leicestershire and Cambridgeshire business owners.</p>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
                     <div class="service-card p-8 rounded-3xl bg-slate-50/50">
-                        <h3 class="heading-font font-bold text-lg text-[#000d6b] mb-4">Compliance</h3>
+                        <h3 class="heading-font font-bold text-lg text-[#175440] mb-4">Compliance</h3>
                         <ul class="text-xs space-y-3 text-slate-500 leading-relaxed font-medium uppercase tracking-wider">
                             <li>• Regulatory Bookkeeping</li>
                             <li>• Statutory Submissions</li>
@@ -275,7 +275,7 @@
                         </ul>
                     </div>
                     <div class="service-card p-8 rounded-3xl bg-slate-50/50">
-                        <h3 class="heading-font font-bold text-lg text-[#000d6b] mb-4">Tax & Reporting</h3>
+                        <h3 class="heading-font font-bold text-lg text-[#175440] mb-4">Tax & Reporting</h3>
                         <ul class="text-xs space-y-3 text-slate-500 leading-relaxed font-medium uppercase tracking-wider">
                             <li>• Corporation Tax</li>
                             <li>• VAT Returns</li>
@@ -286,7 +286,7 @@
                         </ul>
                     </div>
                     <div class="service-card p-8 rounded-3xl bg-slate-50/50">
-                        <h3 class="heading-font font-bold text-lg text-[#000d6b] mb-4">Insights</h3>
+                        <h3 class="heading-font font-bold text-lg text-[#175440] mb-4">Insights</h3>
                         <ul class="text-xs space-y-3 text-slate-500 leading-relaxed font-medium uppercase tracking-wider">
                             <li>• Monthly Business Review</li>
                             <li>• P&L Variance Analysis</li>
@@ -297,7 +297,7 @@
                         </ul>
                     </div>
                     <div class="service-card p-8 rounded-3xl bg-slate-50/50">
-                        <h3 class="heading-font font-bold text-lg text-[#000d6b] mb-4">Advisory</h3>
+                        <h3 class="heading-font font-bold text-lg text-[#175440] mb-4">Advisory</h3>
                         <ul class="text-xs space-y-3 text-slate-500 leading-relaxed font-medium uppercase tracking-wider">
                             <li>• Scenario Planning</li>
                             <li>• ERP Implementation</li>
@@ -320,13 +320,13 @@
         </section>
 
         <!-- NEW ADVISORY / WHY US SECTION -->
-        <section id="advisor" class="py-24 px-6 bg-[#000d6b] text-white relative overflow-hidden">
+        <section id="advisor" class="py-24 px-6 bg-[#175440] text-white relative overflow-hidden">
             <!-- Decorative background glow -->
-            <div class="absolute top-0 right-0 w-96 h-96 bg-[#ff5da2] opacity-10 rounded-full blur-[100px] pointer-events-none transform translate-x-1/2 -translate-y-1/2"></div>
-            <div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-[#000d6b] opacity-50 rounded-full blur-[100px] pointer-events-none transform -translate-x-1/2 translate-y-1/2"></div>
+            <div class="absolute top-0 right-0 w-96 h-96 bg-[#cf983e] opacity-10 rounded-full blur-[100px] pointer-events-none transform translate-x-1/2 -translate-y-1/2"></div>
+            <div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-[#175440] opacity-50 rounded-full blur-[100px] pointer-events-none transform -translate-x-1/2 translate-y-1/2"></div>
 
             <div class="max-w-5xl mx-auto relative z-10 text-center">
-                <span class="text-[#ff5da2] font-extrabold uppercase text-xs tracking-[0.2em] mb-4 block">More Than Just Numbers</span>
+                <span class="text-[#cf983e] font-extrabold uppercase text-xs tracking-[0.2em] mb-4 block">More Than Just Numbers</span>
                 <h2 class="heading-font text-3xl md:text-5xl lg:text-6xl font-extrabold mb-8 leading-tight">
                     Why a Management Accountant is Your Ultimate Business Advisor
                 </h2>
@@ -336,28 +336,28 @@
                 </p>
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16 text-left">
-                    <div class="bg-white/5 backdrop-blur-sm p-8 rounded-[2rem] border border-white/10 hover:border-[#ff5da2]/50 transition-colors">
-                        <div class="w-12 h-12 bg-[#ff5da2]/20 rounded-xl flex items-center justify-center mb-6 text-[#ff5da2]">
+                    <div class="bg-white/5 backdrop-blur-sm p-8 rounded-[2rem] border border-white/10 hover:border-[#cf983e]/50 transition-colors">
+                        <div class="w-12 h-12 bg-[#cf983e]/20 rounded-xl flex items-center justify-center mb-6 text-[#cf983e]">
                             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path></svg>
                         </div>
                         <h4 class="font-bold text-xl mb-3">Beyond the Balance Sheet</h4>
-                        <p class="text-slate-400 font-light leading-relaxed">We translate complex financial data into clear, actionable narratives. We show you the true story behind your numbers so you can lead with certainty.</p>
+                        <p class="text-slate-300 font-light leading-relaxed">We translate complex financial data into clear, actionable narratives. We show you the true story behind your numbers so you can lead with certainty.</p>
                     </div>
                     
-                    <div class="bg-white/5 backdrop-blur-sm p-8 rounded-[2rem] border border-white/10 hover:border-[#ff5da2]/50 transition-colors">
-                        <div class="w-12 h-12 bg-[#ff5da2]/20 rounded-xl flex items-center justify-center mb-6 text-[#ff5da2]">
+                    <div class="bg-white/5 backdrop-blur-sm p-8 rounded-[2rem] border border-white/10 hover:border-[#cf983e]/50 transition-colors">
+                        <div class="w-12 h-12 bg-[#cf983e]/20 rounded-xl flex items-center justify-center mb-6 text-[#cf983e]">
                             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
                         </div>
                         <h4 class="font-bold text-xl mb-3">Strategic Foresight</h4>
-                        <p class="text-slate-400 font-light leading-relaxed">We don't just report history; we map your future. By forecasting scenarios, we help you anticipate cashflow needs and seize opportunities before your competitors.</p>
+                        <p class="text-slate-300 font-light leading-relaxed">We don't just report history; we map your future. By forecasting scenarios, we help you anticipate cashflow needs and seize opportunities before your competitors.</p>
                     </div>
 
-                    <div class="bg-white/5 backdrop-blur-sm p-8 rounded-[2rem] border border-white/10 hover:border-[#ff5da2]/50 transition-colors">
-                        <div class="w-12 h-12 bg-[#ff5da2]/20 rounded-xl flex items-center justify-center mb-6 text-[#ff5da2]">
+                    <div class="bg-white/5 backdrop-blur-sm p-8 rounded-[2rem] border border-white/10 hover:border-[#cf983e]/50 transition-colors">
+                        <div class="w-12 h-12 bg-[#cf983e]/20 rounded-xl flex items-center justify-center mb-6 text-[#cf983e]">
                             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path></svg>
                         </div>
                         <h4 class="font-bold text-xl mb-3">Actionable Growth</h4>
-                        <p class="text-slate-400 font-light leading-relaxed">We pinpoint the exact areas of your business where you can improve margins, reduce waste, and increase overall profitability safely and securely.</p>
+                        <p class="text-slate-300 font-light leading-relaxed">We pinpoint the exact areas of your business where you can improve margins, reduce waste, and increase overall profitability safely and securely.</p>
                     </div>
                 </div>
 
@@ -373,41 +373,41 @@
             <div class="max-w-5xl mx-auto">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
                     <div>
-                        <h2 class="heading-font text-3xl md:text-5xl font-extrabold text-[#000d6b] mb-6">Let's start a conversation</h2>
+                        <h2 class="heading-font text-3xl md:text-5xl font-extrabold text-[#175440] mb-6">Let's start a conversation</h2>
                         <p class="text-slate-500 text-lg mb-10">If you have any questions or need more information, please feel free to book a call, dial our number, or send a message below. We're here to help you achieve your vision.</p>
                         
                         <div class="space-y-6">
                             <div class="flex items-center gap-4">
-                                <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-md text-[#ff5da2] border border-slate-100">
+                                <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-md text-[#cf983e] border border-slate-100">
                                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
                                 </div>
                                 <div>
                                     <span class="block text-[10px] uppercase tracking-widest font-bold text-slate-400">Call Us Directly</span>
-                                    <a href="tel:01536689025" class="font-bold text-[#000d6b] text-lg hover:text-[#ff5da2] transition-colors">01536 689025</a>
+                                    <a href="tel:01536689025" class="font-bold text-[#175440] text-lg hover:text-[#cf983e] transition-colors">01536 689025</a>
                                 </div>
                             </div>
                             <div class="flex items-center gap-4">
-                                <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-md text-[#ff5da2] border border-slate-100">
+                                <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-md text-[#cf983e] border border-slate-100">
                                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                                 </div>
                                 <div>
                                     <span class="block text-[10px] uppercase tracking-widest font-bold text-slate-400">Email Us</span>
-                                    <a href="mailto:benpeers@peerslbc.com" class="font-bold text-[#000d6b] hover:text-[#ff5da2] transition-colors">benpeers@peerslbc.com</a>
+                                    <a href="mailto:benpeers@peerslbc.com" class="font-bold text-[#175440] hover:text-[#cf983e] transition-colors">benpeers@peerslbc.com</a>
                                 </div>
                             </div>
                             <div class="flex items-center gap-4">
-                                <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-md text-[#ff5da2] border border-slate-100">
+                                <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-md text-[#cf983e] border border-slate-100">
                                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
                                 </div>
                                 <div>
                                     <span class="block text-[10px] uppercase tracking-widest font-bold text-slate-400">Location</span>
-                                    <span class="font-bold text-[#000d6b]">Corby, Northamptonshire</span>
+                                    <span class="font-bold text-[#175440]">Corby, Northamptonshire</span>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="bg-white p-8 md:p-10 rounded-[2.5rem] shadow-xl shadow-[#000d6b]/5 border border-slate-100">
+                    <div class="bg-white p-8 md:p-10 rounded-[2.5rem] shadow-xl shadow-[#175440]/5 border border-slate-100">
                         <!-- FormSubmit.co Integration: Robust, No-Code Email Handling -->
                         <form action="https://formsubmit.co/benpeers@peerslbc.com" method="POST" class="space-y-5">
                             <!-- Anti-spam & Configuration -->
@@ -451,11 +451,11 @@
             
             <div class="flex flex-col md:items-end gap-6 text-[10px] uppercase font-bold tracking-[0.2em] text-slate-400">
                 <div class="flex gap-8">
-                    <a href="#" class="hover:text-[#ff5da2] transition-colors">Privacy</a>
-                    <a href="#" class="hover:text-[#ff5da2] transition-colors">Terms</a>
-                    <a href="#contact" class="hover:text-[#ff5da2] transition-colors">Contact</a>
+                    <a href="#" class="hover:text-[#cf983e] transition-colors">Privacy</a>
+                    <a href="#" class="hover:text-[#cf983e] transition-colors">Terms</a>
+                    <a href="#contact" class="hover:text-[#cf983e] transition-colors">Contact</a>
                 </div>
-                <p>&copy; <span id="copyright-year">2025</span> Peers LBC. All Rights Reserved.</p>
+                <p>&copy; <span id="copyright-year">2026</span> Peers LBC. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
@@ -478,4 +478,3 @@
 
 </body>
 </html>
-
